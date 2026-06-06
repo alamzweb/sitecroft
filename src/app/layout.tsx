@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Script from 'next/script';
 
 /* ── DM Sans Variable Font (self-hosted by next/font) ── */
 const dmSans = DM_Sans({
@@ -43,6 +44,11 @@ export default function RootLayout({
         <Footer />
         <SpeedInsights />
         <Analytics />
+        <Script 
+          src="https://cloud.umami.is/script.js" 
+          data-website-id="d2ce2db0-8fd8-443d-a870-45e917a23d49"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
