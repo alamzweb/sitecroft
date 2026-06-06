@@ -25,7 +25,7 @@ const PROFILE = {
   name: "Saad",
   role: "WordPress Developer & Automation Engineer",
   location: "Karachi, Pakistan",
-  photo: "https://dnnengineer.com/wp-content/uploads/2026/03/Image.png",
+  photo: "/image.png",
   description:
     "Based in Karachi, Pakistan. I build WordPress sites and automation workflows using n8n. Sitecroft is my dedicated WordPress development service — built to deliver clean, fast, and functional websites for businesses and individuals worldwide.",
   skills: [
