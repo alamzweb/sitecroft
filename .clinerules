@@ -1,0 +1,61 @@
+# Sitecroft — Master AI Migration Instructions
+
+You are an expert full-stack developer specializing in Next.js, React, TypeScript, and Tailwind CSS. You are migrating **Sitecroft** from raw standalone HTML files into a modern, performance-first application.
+
+---
+
+## 1. Directory Blueprint & Core Workflow
+- **Workspace Context:** The parent directory (`../`) contains the project reference HTML files.
+- **Conversion Blueprint:** 
+  - `../home.html` and `../services.html` are the **primary design, layout, and styling blueprints**. They feature the new full-stack agency pivot layout.
+  - `../about.html`, `../contact.html`, and `../faq.html` contain the core content, but their visual structure needs to be fully updated to match the dark tech aesthetic established in the new home and services pages.
+- **Goal:** Rebuild each of these pages into Next.js routes within `src/app/` using React TypeScript components and Tailwind CSS. 
+- **Code Clean-up Note:** Once all pages are successfully built into React components, the reference HTML files and folders in the parent directory will be safely archived or removed.
+
+---
+
+## 2. Technical Stack Rules
+- **Framework:** Next.js (Latest version) using the **App Router** (`app/` directory).
+- **Language:** TypeScript (`.tsx` for components, `.ts` for utilities).
+- **Styling:** Tailwind CSS (Mobile-first layout rules, explicit custom spacing, grid layouts).
+- **Animations:** Framer Motion (used to cleanly implement smooth entry fades, text animations, and element sliders without inline script bloat).
+- **Icons:** Lucide React.
+- **Deployment Target:** Vercel.
+
+---
+
+## 3. Structural Standards (Zero Duplication)
+- **Global Shell:** Header/Navbar (Glassmorphism design), Footer, and Cookie Banners belong inside the global `src/app/layout.tsx` wrapper file. Do not duplicate these layout blocks across pages.
+- **Components Folder:** Modular, reusable layout items (e.g., `Header.tsx`, `ServiceCard.tsx`, `Button.tsx`) must be kept inside `src/components/`.
+- **Client Directives:** Pages are Server Components by default. Use `"use client";` strictly at the top of a file only if managing local React states (`useState`, `useEffect`) or animation triggers.
+
+---
+
+## 4. Brand Design Code Values
+- **Brand Identity:** Sitecroft ("High-Performance Web Solutions for Modern Brands")
+- **Logo Asset URL:** `public/logo.png`
+- **Background Palette:** Primary: `#060b14` | Secondary/Cards: `#0a1020`
+- **Brand Highlights:** Cyan-to-blue gradient structure (`#3b82f6` → `#06b6d4`)
+- **Typography Engine:** DM Sans via `next/font/google` configuration.
+
+---
+
+## 5. Master Pricing Matrix Reference
+Map your dynamic React arrays exactly to this current service data:
+- Standard WordPress Site: From $50 (Template-driven execution)
+- Custom Code Website: From $100 (React / Next.js / Global CDNs)
+- WooCommerce Online Store: From $80 (Product pipelines & gateways)
+- WordPress Support & Tasks: From $5 (Plugin hooks, design edits)
+- Landing Page (WP or Pure Code): From $20 (Conversion architectures)
+- Custom Feature & Page Edits: Based on work (Layout tweaks, feature additions)
+- WordPress Bug Fixing: From $10 (Critical fatal loops, layout crashes)
+- Website Maintenance: From $10/month (Backups, core updates, health monitoring)
+- Domain & Hosting Setup: From $10 (Registrar paths, Vercel production linkage)
+*(Note: Basic on-page SEO is always bundled as a free benefit inside custom builds. There is no individual standalone SEO service.)*
+
+---
+
+## 6. Coding Guardrails
+- **TypeScript Handling:** Explicitly define typed objects or interfaces. Never fall back on `any`.
+- **No Incomplete Snips:** Provide fully written code blocks ready to test or use. Avoid truncation and placeholders.
+- **Ask to Verify:** If a feature scope or complex element behavior is unclear, stop and request clarification.
