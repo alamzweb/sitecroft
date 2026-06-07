@@ -38,6 +38,23 @@ export default function RootLayout({
       lang="en"
       className={`${dmSans.variable} h-full antialiased`}
     >
+      <head>
+        {/* 1. Google Analytics Script Base */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-28W4ZT1TLQ"
+          strategy="afterInteractive"
+        />
+        {/* 2. Google Analytics Configuration */}
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-28W4ZT1TLQ');
+          `}
+        </Script>
+      </head>
       <body className="min-h-full flex flex-col">
         <Header />
         <main className="flex-1 flex flex-col">{children}</main>
@@ -49,6 +66,7 @@ export default function RootLayout({
           data-website-id="d2ce2db0-8fd8-443d-a870-45e917a23d49"
           strategy="afterInteractive"
         />
+        
       </body>
     </html>
   );
