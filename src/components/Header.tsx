@@ -7,12 +7,13 @@ import { Menu, X } from "lucide-react";
 import { SITE } from "@/lib/constants";
 
 const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/contact", label: "Contact" },
-] as const;
+   { href: "/", label: "Home" },
+   { href: "/about", label: "About" },
+   { href: "/services", label: "Services" },
+   { href: "/work", label: "Work" },
+   { href: "/faq", label: "FAQ" },
+   { href: "/contact", label: "Contact" },
+ ] as const;
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
