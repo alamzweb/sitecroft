@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import {
   MapPin,
   Globe,
@@ -10,28 +11,28 @@ import {
   Award,
   HeartHandshake,
   CheckCircle2,
+  Code,
+  FileText,
 } from "lucide-react";
-import { SITE } from "@/lib/constants";
-
-/* ── Metadata ── */
-export const metadata: Metadata = {
-  title: "About — Sitecroft",
-  description:
-    "About Sitecroft — WordPress developer based in Karachi. Building websites the right way with care and honest communication.",
-};
+import { motion } from "framer-motion";
 
 /* ── Profile Data ── */
 const PROFILE = {
   name: "Saad",
-  role: "WordPress Developer & Automation Engineer",
+  role: "Web Developer & Automation Engineer",
   location: "Karachi, Pakistan",
   photo: "/image.png",
   description:
-    "Based in Karachi, Pakistan. I build WordPress sites and automation workflows using n8n. Sitecroft is my dedicated WordPress development service — built to deliver clean, fast, and functional websites for businesses and individuals worldwide.",
+    "Based in Karachi, Pakistan. I build high-performance websites using React, Next.js, and WordPress, alongside robust automation workflows using n8n. Sitecroft is my dedicated development service — built to deliver clean, fast, and functional web solutions for businesses and individuals worldwide.",
   skills: [
     "WordPress",
     "WooCommerce",
     "HTML & CSS",
+    "JS",
+    "React",
+    "Next.js",
+    "Vite",
+    "TypeScript",
     "Python",
     "n8n Automation",
     "Advanced SEO",
@@ -71,10 +72,16 @@ const TIMELINE = [
       "My first real client project — a full WordPress website built and delivered for a live business. Working with a real client taught me a lot about understanding requirements, managing expectations, and delivering results that matter.",
   },
   {
-    date: "Today",
-    title: "Sitecroft — WordPress Done Right",
+    date: "The Shift to Code",
+    title: "Diving into React & Next.js",
     description:
-      "Sitecroft is the result of everything I've learned — a focused, professional WordPress service with a clear mission: build great websites, communicate clearly, and deliver results that clients are genuinely proud of.",
+      "As web standards evolved, my interest in custom-coded applications grew. I dove deeply into React, Next.js, and TypeScript. Over the past 6+ months, I have built numerous testing platforms, real SaaS projects, and modern web tools, sharpening my skills to a professional level.",
+  },
+  {
+    date: "Today",
+    title: "Sitecroft — High-Performance Web Solutions for Modern Brands",
+    description:
+      "Sitecroft represents the culmination of everything I've learned — a versatile web development service delivering both WordPress solutions and custom-coded applications. My mission: build exceptional websites, communicate clearly, and deliver results that clients are genuinely proud of.",
   },
 ];
 
@@ -99,12 +106,28 @@ const SERVICES_LIST = [
       "Custom WordPress websites built from scratch — responsive, fast, and tailored to your goals.",
   },
   {
+    icon: Code,
+    color: "rgba(34,197,94,0.1)",
+    stroke: "#22c55e",
+    title: "Custom Code Website",
+    description:
+      "High-performance websites using React, Next.js, and modern stacks — built for speed and scalability.",
+  },
+  {
     icon: ShoppingCart,
     color: "rgba(6,182,212,0.1)",
     stroke: "#06b6d4",
     title: "WooCommerce Store",
     description:
       "Complete e-commerce setup so you can start selling online confidently.",
+  },
+  {
+    icon: FileText,
+    color: "rgba(236,72,153,0.1)",
+    stroke: "#ec4899",
+    title: "Landing Page",
+    description:
+      "Conversion-focused landing pages designed to maximize leads and sales.",
   },
   {
     icon: Wrench,
@@ -176,8 +199,7 @@ export default function AboutPage() {
             The Person Behind <span>Your Website</span>
           </h1>
           <p>
-            I'm a WordPress developer who believes in building websites the
-            right way — from scratch, with care, and honest communication throughout.
+            I'm a Web Developer who believes in building websites the right way — with care, precision, and honest communication throughout. I develop high-quality websites in WordPress as well as modern custom stacks like HTML/CSS/JS and React/Next.js.
           </p>
         </div>
       </section>
@@ -226,15 +248,12 @@ export default function AboutPage() {
           <div className="who-section">
             <div className="section-label">Who I Am</div>
             <h2 className="section-title">
-              WordPress Development With a Personal Touch
+              Modern Web Development With a Personal Touch
             </h2>
             <div className="who-grid">
               <div className="who-text-col">
                 <p>
-                  Hi, I'm Saad — a WordPress developer based in Karachi,
-                  Pakistan. Sitecroft is my dedicated WordPress development
-                  service, built around one goal: helping businesses and
-                  individuals get websites that actually work and look great.
+                  Hi, I'm Saad — a Web Developer based in Karachi, Pakistan. Sitecroft is my dedicated development service, built around one goal: helping businesses and individuals get websites that actually work, perform exceptionally, and look great. Along with my deep WordPress background, I bring 6+ months of dedicated experience building fully custom-coded websites.
                 </p>
                 <p>
                   I've spent 2+ years working hands-on with WordPress —
@@ -338,15 +357,17 @@ export default function AboutPage() {
           <div className="section-label">What I Do</div>
           <h2 className="section-title">Services at a Glance</h2>
           <p className="section-sub">
-            A full range of WordPress services to cover everything your website
-            needs.
+            A full range of web development services — from WordPress to custom React/Next.js solutions.
           </p>
           <div className="svc-list">
             {SERVICES_LIST.map((svc, i) => (
-              <div
+              <motion.div
                 key={svc.title}
                 className="svc-item"
-                style={{ animationDelay: `${0.1 * (i + 1)}s` }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 * i }}
               >
                 <div
                   className="svc-item-icon"
@@ -358,7 +379,7 @@ export default function AboutPage() {
                   <h4>{svc.title}</h4>
                   <p>{svc.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
           <div style={{ marginTop: "36px" }}>

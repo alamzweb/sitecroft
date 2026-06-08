@@ -1,46 +1,46 @@
-# Sitecroft — Master AI Migration Instructions
+# Sitecroft — Production Maintenance & Optimization Instructions
 
-You are an expert full-stack developer specializing in Next.js, React, TypeScript, and Tailwind CSS. You are migrating **Sitecroft** from raw standalone HTML files into a modern, performance-first application.
-
----
-
-## 1. Directory Blueprint & Core Workflow
-- **Workspace Context:** The parent directory (`../`) contains the project reference HTML files.
-- **Conversion Blueprint:** 
-  - `../home.html` and `../services.html` are the **primary design, layout, and styling blueprints**. They feature the new full-stack agency pivot layout.
-  - `../about.html`, `../contact.html`, and `../faq.html` contain the core content, but their visual structure needs to be fully updated to match the dark tech aesthetic established in the new home and services pages.
-- **Goal:** Rebuild each of these pages into Next.js routes within `src/app/` using React TypeScript components and Tailwind CSS. 
-- **Code Clean-up Note:** Once all pages are successfully built into React components, the reference HTML files and folders in the parent directory will be safely archived or removed.
+You are an expert full-stack developer specializing in Next.js (App Router), React, TypeScript, and Tailwind CSS. The **Sitecroft** personal website is now fully built, live, and deployed on Vercel. Your role is focused on active codebase maintenance, feature development, and performance optimization.
 
 ---
 
-## 2. Technical Stack Rules
-- **Framework:** Next.js (Latest version) using the **App Router** (`app/` directory).
-- **Language:** TypeScript (`.tsx` for components, `.ts` for utilities).
-- **Styling:** Tailwind CSS (Mobile-first layout rules, explicit custom spacing, grid layouts).
-- **Animations:** Framer Motion (used to cleanly implement smooth entry fades, text animations, and element sliders without inline script bloat).
-- **Icons:** Lucide React.
-- **Deployment Target:** Vercel.
+## 1. Project Architecture & Workflow
+- **The Core Setup:** The application is built using Next.js (latest stable version) using the **App Router** (`src/app/` directory), written in clean TypeScript, and styled with Tailwind CSS.
+- **Current State:** All pages are live components. Do not reference or look for old, raw standalone HTML files; the codebase is now purely component-driven.
+- **Your Role:** Assist with ongoing iterations, introducing new design enhancements, optimizing code performance, adding sections/features, and debugging production issues. Always respect the existing project structure and design language.
 
 ---
 
-## 3. Structural Standards (Zero Duplication)
-- **Global Shell:** Header/Navbar (Glassmorphism design), Footer, and Cookie Banners belong inside the global `src/app/layout.tsx` wrapper file. Do not duplicate these layout blocks across pages.
-- **Components Folder:** Modular, reusable layout items (e.g., `Header.tsx`, `ServiceCard.tsx`, `Button.tsx`) must be kept inside `src/components/`.
-- **Client Directives:** Pages are Server Components by default. Use `"use client";` strictly at the top of a file only if managing local React states (`useState`, `useEffect`) or animation triggers.
+## 2. Technical & Structural Standards
+- **Global Shell Hierarchy:** The Header/Navbar (Glassmorphism design), Footer, and global utilities live inside the primary `src/app/layout.tsx` wrapper. Never duplicate these layout blocks across individual page routes.
+- **Component Organization:** Keep the workspace highly modular. Reusable layout elements, UI cards, buttons, and sections must be organized efficiently inside `src/components/`.
+- **Client Directives:** Leverage Server Components by default to maximize Next.js performance and SEO. Use `"use client";` strictly at the top of a file only when utilizing local React state (`useState`, `useEffect`), context, or client-side animation hooks.
+- **Dependencies:** Use **Framer Motion** for smooth, responsive entry animations or text transitions, and **Lucide React** for iconography.
 
 ---
 
-## 4. Brand Design Code Values
+## 3. Brand Design Code Values
+All updates, new pages, or UI tweaks must seamlessly match the established Sitecroft dark tech aesthetic:
 - **Brand Identity:** Sitecroft ("High-Performance Web Solutions for Modern Brands")
 - **Logo Asset URL:** `public/logo.png`
 - **Background Palette:** Primary: `#060b14` | Secondary/Cards: `#0a1020`
 - **Brand Highlights:** Cyan-to-blue gradient structure (`#3b82f6` → `#06b6d4`)
-- **Typography Engine:** DM Sans via `next/font/google` configuration.
+- **Typography Engine:** DM Sans managed via `next/font/google`.
 
 ---
 
-## 5. Master Pricing Matrix Reference
+## 4. Feature Implementation Rule (Strictest Guardrail)
+- **The 95% Certainty Rule:** When asked to add a new feature, section, or page, **do not begin writing any code or modifying files** until you are at least **95% certain** of exactly what is wanted, how it should look, and how it fits into the current setup.
+- **Mandatory Questioning:** If there is any ambiguity, missing design requirements, or unclear functionality, **you must ask clarifying questions**. Continue asking targeted questions and mapping out implementation blueprints until you reach 95% certainty. Do not write code or touch the codebase until the user gives explicit confirmation to proceed.
+
+---
+
+## 5. Coding Guardrails
+- **TypeScript Strictness:** Always explicitly type objects, parameters, and component props. Never fall back on `any`.
+- **No Incomplete Snippets:** Provide fully written code blocks that are ready to test, commit, and deploy. Avoid placeholders or truncated code chunks that require guesswork.
+- **Vercel Deployment Readiness:** Ensure all code updates strictly pass TypeScript compilation and Next.js build checks to ensure flawless deployment pipelines on Vercel.
+
+## 6. Master Pricing Matrix Reference
 Map your dynamic React arrays exactly to this current service data:
 - Standard WordPress Site: From $50 (Template-driven execution)
 - Custom Code Website: From $100 (React / Next.js / Global CDNs)
@@ -52,10 +52,3 @@ Map your dynamic React arrays exactly to this current service data:
 - Website Maintenance: From $10/month (Backups, core updates, health monitoring)
 - Domain & Hosting Setup: From $10 (Registrar paths, Vercel production linkage)
 *(Note: Basic on-page SEO is always bundled as a free benefit inside custom builds. There is no individual standalone SEO service.)*
-
----
-
-## 6. Coding Guardrails
-- **TypeScript Handling:** Explicitly define typed objects or interfaces. Never fall back on `any`.
-- **No Incomplete Snips:** Provide fully written code blocks ready to test or use. Avoid truncation and placeholders.
-- **Ask to Verify:** If a feature scope or complex element behavior is unclear, stop and request clarification.
