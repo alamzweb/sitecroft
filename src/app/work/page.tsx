@@ -4,29 +4,37 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 
-const placeholderProjects = [
+const projects = [
   {
-    title: "Project Title 1",
-    description: "A brief description of this amazing web project. Highlight the key features, goals, and what made it unique.",
-    techStack: ["Next.js", "React", "TypeScript"],
-    category: "Custom Web App",
-    liveUrl: "#",
-  },
-  {
-    title: "Project Title 2",
-    description: "Another impressive project showcasing modern web development techniques and clean design principles.",
-    techStack: ["WordPress", "WooCommerce", "n8n"],
-    category: "E-Commerce",
-    liveUrl: "#",
-  },
-  {
-    title: "Project Title 3",
-    description: "A specialized solution built for performance and scalability, demonstrating expertise in modern frameworks.",
-    techStack: ["React", "Vercel", "Tailwind CSS"],
+    title: "LinkFilo",
+    description: "LinkFilo provides a straightforward way for you to upload any file and receive a unique shareable link instantly. This tool helps you share files with others quickly and easily, offering free file sharing capabilities for everyone.",
+    techStack: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     category: "SaaS",
-    liveUrl: "#",
+    liveUrl: "https://linkfilo.dnnengineer.com",
+    image: "/linkfilo.png",
+    isClientProject: false,
   },
+  {
+    title: "GridLeap",
+    description: "GridLeap is a zero-budget SaaS that instantly transforms static, messy CSV files into professional, mobile-friendly web dashboards to help small international organizations—like schools, clinics, and shops.",
+    techStack: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    category: "SaaS",
+    liveUrl: "https://gridleap.vercel.app/",
+    image: "/gridleap.png",
+    isClientProject: false,
+  },
+  {
+    title: "Nimbus Essence",
+    description: "Nimbus Essence offers premium, gentle skincare and haircare products made with safe, ethical ingredients. Designed for all skin and hair types, it helps you achieve natural beauty and confidence every day.",
+    techStack: ["WordPress", "WooCommerce", "HTML", "CSS"],
+    category: "E-Commerce",
+    liveUrl: "https://nimbusessence.org",
+    image: "/nimbusessence.png",
+    isClientProject: true,
+  },
+
 ];
+
 
 const featuredPlugins = [
   {
@@ -127,7 +135,7 @@ export default function WorkPage() {
           </p>
 
           <div className="cards-grid">
-            {placeholderProjects.map((project, i) => (
+            {projects.map((project, i) => (
               <ProjectCard
                 key={i}
                 index={i}
@@ -136,9 +144,12 @@ export default function WorkPage() {
                 techStack={project.techStack}
                 category={project.category}
                 liveUrl={project.liveUrl}
+                image={project.image}
+                isClientProject={project.isClientProject}
               />
             ))}
           </div>
+
         </div>
       </section>
 
