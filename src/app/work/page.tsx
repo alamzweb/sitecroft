@@ -30,9 +30,26 @@ const projects = [
     category: "E-Commerce",
     liveUrl: "https://nimbusessence.org",
     image: "/nimbusessence.png",
-    isClientProject: true,
+    isClientProject: false,
   },
-
+  {
+    title: "Flawless",
+    description: "A premium skincare and beauty brand offering organic, natural care products with clean aesthetics and professional-grade formulations for everyday customers.",
+    techStack: ["WordPress", "WooCommerce", "Elementor", "Astra"],
+    category: "E-Commerce",
+    liveUrl: "https://web.dnnengineer.com/cosmetics/",
+    image: "/cosmetics.png",
+    isClientProject: false,
+  },
+  {
+    title: "Plumbers Guild of America",
+    description: "A professional organization connecting homeowners with 1,500+ verified plumbing contractors across all 50 states, offering directories, training, and industry resources.",
+    techStack: ["WordPress", "Elementor", "bbPress", "Astra"],
+    category: "Web App",
+    liveUrl: "https://web.dnnengineer.com/contractors/",
+    image: "/contractors.png",
+    isClientProject: false,
+  },
 ];
 
 
