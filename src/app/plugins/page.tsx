@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import PluginCardGrid from "@/components/PluginCardGrid";
 import PluginHorizontalCard from "@/components/PluginHorizontalCard";
 import PluginModal, { type MediaItem } from "@/components/PluginModal";
+import ComingSoon from "@/components/ComingSoon";
 
 const pluginsData = [
   {
@@ -114,6 +115,8 @@ export default function PluginsPage() {
 
   return (
     <>
+      <ComingSoon estimated="To Be Determined"/>
+
       {/* Page Header */}
       <section className="page-hero">
         <div className="page-hero-bg" />
