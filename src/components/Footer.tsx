@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { SITE } from "@/lib/constants";
+import SubscribePopup from "@/components/SubscribePopup";
 
 const SOCIAL_LINKS = [
   {
@@ -46,132 +48,317 @@ const SOCIAL_LINKS = [
 ];
 
 export default function Footer() {
+  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subscribing, setSubscribing] = useState(false);
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [popupMessage, setPopupMessage] = useState("");
+  const [isAlreadySubscribed, setIsAlreadySubscribed] = useState(false);
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!firstName.trim() || !email.trim()) return;
+
+    setSubscribing(true);
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ firstName: firstName.trim(), email: email.trim() }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setFirstName("");
+        setEmail("");
+        setPopupMessage(data.message || "Subscribed successfully!");
+        setIsAlreadySubscribed(!!data.alreadySubscribed);
+        setPopupOpen(true);
+      }
+    } catch {
+      // silent fail
+    } finally {
+      setSubscribing(false);
+    }
+  };
+
   return (
-    <footer className="site-footer">
-      <div className="footer-inner">
-        <div className="footer-top">
-          <div className="footer-brand">
-            <div className="footer-logo-wrap">
-              <Image
-                src={SITE.logo}
-                alt="Sitecroft Logo"
-                width={50}
-                height={50}
-              />
-              <span>sitecroft</span>
+    <>
+      <footer className="site-footer">
+        <div className="footer-inner">
+          <div className="footer-top">
+            <div className="footer-brand">
+              <div className="footer-logo-wrap">
+                <Image
+                  src={SITE.logo}
+                  alt="Sitecroft Logo"
+                  width={50}
+                  height={50}
+                />
+                <span>sitecroft</span>
+              </div>
+              <div className="footer-badge">
+                <div className="footer-badge-dot" />
+                <span>Available for new projects</span>
+              </div>
+              <p>
+                Professional full-stack web development services. Clean builds,
+                honest communication, and results that matter.
+              </p>
             </div>
-            <div className="footer-badge">
-              <div className="footer-badge-dot" />
-              <span>Available for new projects</span>
+
+            <div className="footer-col">
+              <h5>Services</h5>
+              <Link href="/services#wp-standard">WordPress Site</Link>
+              <Link href="/services#custom-code">Custom Code Website</Link>
+              <Link href="/services#woocommerce">WooCommerce Store</Link>
+              <Link href="/services#landing-page">Landing Page</Link>
+              <Link href="/services#bug-fixing">Bug & Error Fixing</Link>
+              <Link href="/services#maintenance">Maintenance</Link>
             </div>
-            <p>
-              Professional full-stack web development services. Clean builds,
-              honest communication, and results that matter.
-            </p>
+
+            <div className="footer-col">
+              <h5>Company</h5>
+              <Link href="/">Home</Link>
+              <Link href="/about">About</Link>
+              <Link href="/services">Services</Link>
+              <Link href="/faq">Work</Link>
+              <Link href="/plugins">Plugins</Link>
+              <Link href="/faq">FAQ</Link>
+              <Link href="/contact">Contact</Link>
+            </div>
+
+            <div className="footer-col">
+              <h5>Legal</h5>
+              <Link href="/privacy-policy">Privacy Policy</Link>
+              <Link href="/terms-and-conditions">Terms of Service</Link>
+              <Link href="/cookie-policy">Cookie Policy</Link>
+            </div>
           </div>
 
-          <div className="footer-col">
-            <h5>Services</h5>
-            <Link href="/services#wp-standard">WordPress Site</Link>
-            <Link href="/services#custom-code">Custom Code Website</Link>
-            <Link href="/services#woocommerce">WooCommerce Store</Link>
-            <Link href="/services#landing-page">Landing Page</Link>
-            <Link href="/services#bug-fixing">Bug & Error Fixing</Link>
-            <Link href="/services#maintenance">Maintenance</Link>
-          </div>
+          {/* Subscription Section — integrated under the footer columns */}
+          <div
+            style={{
+              borderTop: "1px solid rgba(99,179,237,0.06)",
+              marginTop: "0",
+              paddingTop: "32px",
+              paddingBottom: "32px",
+              marginBottom: "0",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                flexWrap: "wrap",
+                gap: "20px",
+              }}
+            >
+              {/* Left text */}
+              <div style={{ maxWidth: "320px" }}>
+                <h5
+                  style={{
+                    fontSize: "12px",
+                    fontWeight: 700,
+                    color: "#fff",
+                    marginBottom: "6px",
+                    letterSpacing: "1px",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Stay Updated
+                </h5>
+                <p
+                  style={{
+                    fontSize: "13px",
+                    color: "#64748b",
+                    lineHeight: 1.6,
+                    margin: 0,
+                  }}
+                >
+                  Get notified about exclusive offers, new features, and industry
+                  insights.
+                </p>
+              </div>
 
-          <div className="footer-col">
-            <h5>Company</h5>
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/faq">Work</Link>
-            <Link href="/plugins">Plugins</Link>
-            <Link href="/faq">FAQ</Link>
-            <Link href="/contact">Contact</Link>
-          </div>
-
-          <div className="footer-col">
-            <h5>Legal</h5>
-            <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/terms-and-conditions">Terms of Service</Link>
-            <Link href="/cookie-policy">Cookie Policy</Link>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <p>2026 Sitecroft. All rights reserved.</p>
-          <div className="footer-socials">
-            {SOCIAL_LINKS.map((social) => (
-              <a
-                key={social.label}
-                className="social-btn"
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.label}
+              {/* Right form */}
+              <form
+                onSubmit={handleSubscribe}
+                style={{
+                  display: "flex",
+                  gap: "10px",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                }}
               >
-                {social.isRect ? (
-                  <svg
-                    className="stroke-icon"
-                    viewBox={social.viewBox}
-                    width="18"
-                    height="18"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      x="2"
-                      y="2"
-                      width="20"
-                      height="20"
-                      rx="5"
-                      ry="5"
-                    />
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                  </svg>
-                ) : social.circle ? (
-                  <svg
-                    viewBox={social.viewBox}
-                    width="18"
-                    height="18"
-                    fill={social.isStroke ? "none" : "#64748b"}
-                    stroke={social.isStroke ? "#64748b" : "none"}
-                    strokeWidth={social.isStroke ? "2" : "0"}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d={social.path} />
-                    <circle cx={social.circle.cx} cy={social.circle.cy} r={social.circle.r} />
-                  </svg>
-                ) : social.polyline ? (
-                  <svg
-                    className="stroke-icon"
-                    viewBox={social.viewBox}
-                    width="18"
-                    height="18"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d={social.path} />
-                    <polyline points={social.polyline} />
-                  </svg>
-                ) : (
-                  <svg
-                    viewBox={social.viewBox}
-                    width="18"
-                    height="18"
-                    fill={social.isStroke ? "none" : "#64748b"}
-                    stroke={social.isStroke ? "#64748b" : "none"}
-                    strokeWidth={social.isStroke ? "2" : "0"}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d={social.path} />
-                  </svg>
-                )}
-              </a>
-            ))}
+                <input
+                  type="text"
+                  placeholder="First name"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  required
+                  style={{
+                    background: "rgba(99,179,237,0.05)",
+                    border: "1px solid rgba(99,179,237,0.12)",
+                    borderRadius: "8px",
+                    padding: "10px 14px",
+                    fontSize: "13px",
+                    color: "#e2e8f0",
+                    outline: "none",
+                    width: "160px",
+                    height: "40px",
+                    boxSizing: "border-box",
+                    transition: "border-color 0.2s",
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(6,182,212,0.4)";
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(99,179,237,0.12)";
+                  }}
+                />
+                <input
+                  type="email"
+                  placeholder="Email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  style={{
+                    background: "rgba(99,179,237,0.05)",
+                    border: "1px solid rgba(99,179,237,0.12)",
+                    borderRadius: "8px",
+                    padding: "10px 14px",
+                    fontSize: "13px",
+                    color: "#e2e8f0",
+                    outline: "none",
+                    width: "160px",
+                    height: "40px",
+                    boxSizing: "border-box",
+                    transition: "border-color 0.2s",
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(6,182,212,0.4)";
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(99,179,237,0.12)";
+                  }}
+                />
+                <button
+                  type="submit"
+                  disabled={subscribing}
+                  style={{
+                    background: "linear-gradient(135deg, #3b82f6, #06b6d4)",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: "8px",
+                    padding: "0 20px",
+                    fontSize: "13px",
+                    fontWeight: 600,
+                    height: "40px",
+                    cursor: subscribing ? "not-allowed" : "pointer",
+                    opacity: subscribing ? 0.7 : 1,
+                    transition: "opacity 0.2s, box-shadow 0.2s",
+                    boxShadow: "0 0 12px rgba(59,130,246,0.2)",
+                    whiteSpace: "nowrap",
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!subscribing)
+                      e.currentTarget.style.boxShadow =
+                        "0 0 20px rgba(59,130,246,0.4)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = "0 0 12px rgba(59,130,246,0.2)";
+                  }}
+                >
+                  {subscribing ? "..." : "Subscribe"}
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div className="footer-bottom">
+            <p>2026 Sitecroft. All rights reserved.</p>
+            <div className="footer-socials">
+              {SOCIAL_LINKS.map((social) => (
+                <a
+                  key={social.label}
+                  className="social-btn"
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                >
+                  {social.isRect ? (
+                    <svg
+                      className="stroke-icon"
+                      viewBox={social.viewBox}
+                      width="18"
+                      height="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="2"
+                        y="2"
+                        width="20"
+                        height="20"
+                        rx="5"
+                        ry="5"
+                      />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                  ) : social.circle ? (
+                    <svg
+                      viewBox={social.viewBox}
+                      width="18"
+                      height="18"
+                      fill={social.isStroke ? "none" : "#64748b"}
+                      stroke={social.isStroke ? "#64748b" : "none"}
+                      strokeWidth={social.isStroke ? "2" : "0"}
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d={social.path} />
+                      <circle cx={social.circle.cx} cy={social.circle.cy} r={social.circle.r} />
+                    </svg>
+                  ) : social.polyline ? (
+                    <svg
+                      className="stroke-icon"
+                      viewBox={social.viewBox}
+                      width="18"
+                      height="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d={social.path} />
+                      <polyline points={social.polyline} />
+                    </svg>
+                  ) : (
+                    <svg
+                      viewBox={social.viewBox}
+                      width="18"
+                      height="18"
+                      fill={social.isStroke ? "none" : "#64748b"}
+                      stroke={social.isStroke ? "#64748b" : "none"}
+                      strokeWidth={social.isStroke ? "2" : "0"}
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d={social.path} />
+                    </svg>
+                  )}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+
+      <SubscribePopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+        message={popupMessage}
+        alreadySubscribed={isAlreadySubscribed}
+      />
+    </>
   );
 }

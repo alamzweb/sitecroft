@@ -26,6 +26,7 @@ All updates, new pages, or UI tweaks must seamlessly match the established Sitec
 - **Background Palette:** Primary: `#060b14` | Secondary/Cards: `#0a1020`
 - **Brand Highlights:** Cyan-to-blue gradient structure (`#3b82f6` → `#06b6d4`)
 - **Typography Engine:** DM Sans managed via `next/font/google`.
+- **Description:** Sitecroft is a freelance web development studio run by Saad, offering professional website design and development services for small businesses and modern brands. They handle everything from building WordPress sites and WooCommerce stores to crafting fully hand-coded websites using React, Next.js, and HTML. Beyond building new sites, they also offer ongoing support — fixing bugs, managing maintenance, setting up domains and hosting, and making custom edits to existing sites. Their focus is on clean, lightweight code that loads fast, ranks well on search engines, and scales with your business, all delivered with honest communication and a quick turnaround.
 
 ---
 
