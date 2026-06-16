@@ -8,6 +8,7 @@ export default function ContactPage() {
     email: "",
     phone: "",
     service: "",
+    promoCode: "",
     message: "",
   });
   const [status, setStatus] = useState<{ type: "success" | "error"; msg: string } | null>(null);
@@ -31,7 +32,7 @@ export default function ContactPage() {
       const data = await res.json();
       if (res.ok) {
         setSent(true);
-        setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+        setFormData({ name: "", email: "", phone: "", service: "", promoCode: "", message: "" });
       } else {
         setStatus({ type: "error", msg: data.error || "Something went wrong. Please try again." });
       }
@@ -147,6 +148,10 @@ export default function ContactPage() {
                   <option value="Domain & Hosting Setup">Domain & Hosting Setup</option>
                   <option value="Something else">Something else</option>
                 </select>
+              </div>
+              <div className="form-field">
+                <label className="field-label" htmlFor="promoCode">Promo Code (Optional)</label>
+                <input id="promoCode" name="promoCode" type="text" placeholder="e.g. SITECROFT-XXXXX" value={formData.promoCode} onChange={handleChange} />
               </div>
               <div className="form-field">
                 <label className="field-label" htmlFor="message">Tell Me About Your Project *</label>

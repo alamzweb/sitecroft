@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, phone, service, message } = body;
+    const { name, email, phone, service, promoCode, message } = body;
 
     if (!name || !email || !message) {
       return NextResponse.json(
@@ -43,6 +43,7 @@ export async function POST(request: NextRequest) {
               </tr>
               ${phone ? `<tr><td style="padding:10px 0;color:#64748b;font-size:13px;">Phone</td><td style="padding:10px 0;color:#fff;font-size:14px;">${phone}</td></tr>` : ""}
               ${service ? `<tr><td style="padding:10px 0;color:#64748b;font-size:13px;">Service</td><td style="padding:10px 0;color:#fff;font-size:14px;">${service}</td></tr>` : ""}
+              ${promoCode ? `<tr><td style="padding:10px 0;color:#64748b;font-size:13px;">Promo Code</td><td style="padding:10px 0;color:#06b6d4;font-size:14px;font-weight:700;letter-spacing:1px;">${promoCode}</td></tr>` : ""}
               <tr>
                 <td style="padding: 10px 0; color: #64748b; font-size: 13px; vertical-align: top;">Message</td>
                 <td style="padding: 10px 0; color: #fff; font-size: 14px; line-height: 1.7; white-space: pre-wrap;">${message}</td>

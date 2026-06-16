@@ -13,6 +13,16 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+/** Generate a unique promo code: SITECROFT-XXXXX */
+function generatePromoCode(): string {
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  let code = "";
+  for (let i = 0; i < 5; i++) {
+    code += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return `SITECROFT-${code}`;
+}
+
 /** Call the Google Apps Script with a given payload and return parsed JSON */
 async function callGoogleScript(payload: Record<string, unknown>) {
   const url = process.env.GOOGLE_SCRIPT_URL;
@@ -71,25 +81,14 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Step 2: Add the subscriber to Google Sheets (with subscription + emailStatus columns)
-    if (googleScriptUrl) {
-      await callGoogleScript({
-        dispatch: "add",
-        firstName,
-        email,
-        date: formattedDate,
-        subscription: "Active",
-        emailStatus: "Pending",
-      });
-    }
+    // Step 2: Generate promo code
+    const promoCode = generatePromoCode();
 
-    // Step 3: Send Welcome Email
+    // Step 3: Send Welcome Email (with promo code)
     let emailSent = false;
     try {
-      // Read and encode the logo
       const logoPath = join(process.cwd(), "public", "logo.png");
       const logoBuffer = readFileSync(logoPath);
-      const logoBase64 = logoBuffer.toString("base64");
 
       const mailOptions = {
         from: `"Saad @ Sitecroft" <${process.env.SMTP_USER}>`,
@@ -108,7 +107,6 @@ export async function POST(request: NextRequest) {
 
               <!-- Greeting -->
               <h2 style="color: #fff; font-size: 22px; margin-bottom: 4px; text-align: center;">Hey ${firstName}, Saad here! 👋</h2>
-
               <p style="color: #64748b; font-size: 13px; text-align: center; margin-bottom: 24px; font-style: italic;">Founder of Sitecroft</p>
 
               <p style="color: #94a3b8; font-size: 15px; line-height: 1.7; text-align: center; margin-bottom: 20px;">
@@ -131,6 +129,30 @@ export async function POST(request: NextRequest) {
               <!-- CTA Button -->
               <div style="text-align: center; margin-bottom: 28px;">
                 <a href="https://sitecroft.com" style="display: inline-block; background: linear-gradient(135deg, #3b82f6, #06b6d4); color: #fff; padding: 14px 32px; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 0 20px rgba(59,130,246,0.3);">Visit Sitecroft</a>
+              </div>
+
+              <!-- Promo Code Card -->
+              <div style="background: rgba(6,182,212,0.06); border: 1px dashed rgba(6,182,212,0.25); border-radius: 12px; padding: 24px; margin-bottom: 28px; text-align: center;">
+                <p style="color: #06b6d4; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">🎁 Welcome Gift</p>
+                <p style="color: #e2e8f0; font-size: 14px; line-height: 1.6; margin-bottom: 14px;">
+                  But wait, there's more! To kick things off, here's a special welcome gift just for you.
+                </p>
+                <p style="color: #94a3b8; font-size: 13px; line-height: 1.6; margin-bottom: 18px;">
+                  When you book any main web development service (Standard WordPress Site, Custom Code Website, or WooCommerce Store), you can choose one of these exclusive perks:
+                </p>
+                <div style="background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.12); border-radius: 8px; padding: 14px 16px; margin-bottom: 14px; text-align: left;">
+                  <p style="color: #63b3ed; font-size: 13px; font-weight: 600; margin-bottom: 4px;">Option A</p>
+                  <p style="color: #94a3b8; font-size: 12px; margin: 0;">Free Domain & Hosting Setup (valued at $10)</p>
+                </div>
+                <div style="background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.12); border-radius: 8px; padding: 14px 16px; margin-bottom: 18px; text-align: left;">
+                  <p style="color: #63b3ed; font-size: 13px; font-weight: 600; margin-bottom: 4px;">Option B</p>
+                  <p style="color: #94a3b8; font-size: 12px; margin: 0;">2 Free Bug Fixes / Edits — valid for up to 2 months after your website goes live (if you already have hosting)</p>
+                </div>
+                <p style="color: #94a3b8; font-size: 12px; margin-bottom: 10px;">Use this code at checkout:</p>
+                <div style="background: #060b14; border: 2px dashed #06b6d4; border-radius: 10px; padding: 14px 24px; display: inline-block;">
+                  <span style="font-family: 'Courier New', monospace; font-size: 20px; font-weight: 800; color: #06b6d4; letter-spacing: 3px;">${promoCode}</span>
+                </div>
+                <p style="color: #475569; font-size: 11px; margin-top: 10px;">* Valid on one service only. Cannot be combined with other offers.</p>
               </div>
 
               <!-- Friendly note -->
@@ -179,12 +201,17 @@ export async function POST(request: NextRequest) {
       emailSent = false;
     }
 
-    // Step 4: Update the emailStatus in Google Sheets
+    // Step 4: Append subscriber to Google Sheets (only after email status is known)
     if (googleScriptUrl) {
       await callGoogleScript({
-        dispatch: "updateEmailStatus",
+        dispatch: "add",
+        firstName,
         email,
+        date: formattedDate,
+        subscription: "Active",
         emailStatus: emailSent ? "Sent" : "Failed",
+        promoCode,
+        codeStatus: "Active",
       });
     }
 
