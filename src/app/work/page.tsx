@@ -50,6 +50,24 @@ const projects = [
     image: "/contractors.png",
     isClientProject: false,
   },
+  {
+    title: "Real Estate",
+    description: "A modern property platform offering a curated selection of residential and commercial listings with clean layouts and intuitive filtering for home seekers.",
+    techStack: ["WordPress", "Elementor", "Astra"],
+    category: "Web App",
+    liveUrl: "https://web.dnnengineer.com/realestate/",
+    image: "/realestate.png",
+    isClientProject: false,
+  },
+  {
+    title: "Cosmetics",
+    description: "A premium multi-brand beauty store offering authentic skincare and ethical cosmetic products with sustainable sourcing and a seamless shopping experience.",
+    techStack: ["WordPress", "WooCommerce", "Elementor", "Astra"],
+    category: "E-Commerce",
+    liveUrl: "https://web.dnnengineer.com/cosmetics-1/",
+    image: "/cosmetics-1.png",
+    isClientProject: false,
+  },
 ];
 
 
