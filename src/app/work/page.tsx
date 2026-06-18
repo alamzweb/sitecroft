@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
+import AutomationCard from "@/components/AutomationCard";
 
 const projects = [
   {
@@ -92,6 +93,20 @@ const featuredPlugins = [
     description: "Automated schema markup generator for rich snippets and SEO.",
     authors: "Saad + Claude",
     image: "https://images.unsplash.com/photo-1432889821006-314940b9b1d0?w=800&q=80",
+  },
+];
+
+const automations = [
+  {
+    title: "Gmail AI Agent",
+    description: "An AI-powered Gmail Agent that automatically reads unread emails, classifies them using Gemini AI, applies custom Gmail labels, and generates context-aware draft replies directly inside Gmail.",
+    techStack: ["Python", "Gemini AI"],
+    media: [
+      { type: "image" as const, src: "/automations/images/gmail_ai_agent_screenshot.png" },
+      { type: "video" as const, src: "/automations/videos/gmail_ai_agent_demo.mp4" },
+    ],
+    downloadUrl: "/automations/gmail_ai_agent.zip",
+    guideUrl: "/automations/guides/AI_Gmail_Assistant_Guide.pdf",
   },
 ];
 
@@ -185,6 +200,32 @@ export default function WorkPage() {
             ))}
           </div>
 
+        </div>
+      </section>
+
+      {/* Automations Section */}
+      <section className="relative py-20 px-6" style={{ background: "#060b14" }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="section-label mb-6">Automations</div>
+          <h2 className="section-title mb-4">Workflow Automations</h2>
+          <p className="section-sub mb-12">
+            Custom automation scripts and AI-powered pipelines that streamline repetitive tasks and boost productivity.
+          </p>
+
+          <div className="cards-grid">
+            {automations.map((item, i) => (
+              <AutomationCard
+                key={i}
+                index={i}
+                title={item.title}
+                description={item.description}
+                techStack={item.techStack}
+                media={item.media}
+                downloadUrl={item.downloadUrl}
+                guideUrl={item.guideUrl}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
