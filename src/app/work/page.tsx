@@ -69,6 +69,15 @@ const projects = [
     image: "/cosmetics-1.png",
     isClientProject: false,
   },
+  {
+    title: "The Burger Bistro Pizza Studio",
+    description: "A digital restaurant menu for a Karachi-based bistro offering burgers, pizzas, and broast with detailed pricing, contact info, and easy directions.",
+    techStack: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    category: "Food & Beverage",
+    liveUrl: "https://bistro-studio-site.wasmer.app/",
+    image: "/bistro-studio-site.png",
+    isClientProject: false,
+  },
 ];
 
 
