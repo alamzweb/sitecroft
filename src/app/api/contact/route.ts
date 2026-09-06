@@ -2,12 +2,12 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.hostinger.com",
-  port: 465,
+  host: "smtp.gmail.com",
+  port: 587,
   secure: true,
   auth: {
-    user: "contact@dnnengineer.com",
-    pass: "DnnE_Adm1n_Contact",
+    user: "alamzweb@gmail.com",
+    pass: "ktzn yqfm aamp cmbu",
   },
 });
 

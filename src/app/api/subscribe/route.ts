@@ -91,7 +91,7 @@ export async function POST(request: NextRequest) {
       const logoBuffer = readFileSync(logoPath);
 
       const mailOptions = {
-        from: `"Saad @ Sitecroft" <${process.env.SMTP_USER}>`,
+        from: `"Saad @ Sitecroft" <contact@dnnengineer.com>`,
         to: email,
         subject: `Hey ${firstName}! Welcome to the Sitecroft Newsletter 🎉`,
         html: `
