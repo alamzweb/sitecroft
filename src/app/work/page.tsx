@@ -78,6 +78,15 @@ const projects = [
     image: "/bistro-studio-site.png",
     isClientProject: false,
   },
+  {
+    title: "NOCTE — A Night Worth Remembering",
+    description: "An intimate late-night dining lounge in Karachi offering fire-forward plates, seasonal cocktails, and modern European cooking in an atmospheric, reservation-only setting.",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    category: "Food & Beverage",
+    liveUrl: "https://nocte.wasmer.app/",
+    image: "/nocte.png",
+    isClientProject: false,
+  },
 ];
 
 
