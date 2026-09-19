@@ -17,6 +17,8 @@ export interface ProjectCardProps {
   image?: string;
   /** Whether to show the "Client Project" badge */
   isClientProject?: boolean;
+  /** Project status: Live (real/deployed) or Demo (concept/personal build). Ignored if isClientProject is true. */
+  status?: "Live" | "Demo";
   /** Optional icon for the project */
   icon?: ReactNode;
   /** Index for animation delay */
@@ -31,6 +33,7 @@ export default function ProjectCard({
   liveUrl,
   image,
   isClientProject = false,
+  status,
   icon,
   index = 0,
 }: ProjectCardProps) {
@@ -96,7 +99,7 @@ export default function ProjectCard({
           {category}
         </div>
 
-        {isClientProject && (
+        {isClientProject ? (
           <div
             style={{
               display: "inline-flex",
@@ -121,7 +124,43 @@ export default function ProjectCard({
             </svg>
             Client Project
           </div>
-        )}
+        ) : status ? (
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "5px",
+              padding: "5px 10px",
+              borderRadius: "999px",
+              fontSize: "10px",
+              fontWeight: 700,
+              textTransform: "uppercase",
+              letterSpacing: "0.5px",
+              ...(status === "Live"
+                ? {
+                    color: "#4ade80",
+                    background: "rgba(74,222,128,0.08)",
+                    border: "1px solid rgba(74,222,128,0.25)",
+                  }
+                : {
+                    color: "rgba(148,163,184,0.9)",
+                    background: "rgba(100,116,139,0.12)",
+                    border: "1px solid rgba(100,116,139,0.25)",
+                  }),
+            }}
+          >
+            <span
+              style={{
+                width: "6px",
+                height: "6px",
+                borderRadius: "50%",
+                backgroundColor: status === "Live" ? "#4ade80" : "rgba(148,163,184,0.8)",
+                flexShrink: 0,
+              }}
+            />
+            {status}
+          </div>
+        ) : null}
       </div>
 
 

@@ -5,7 +5,20 @@ import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import AutomationCard from "@/components/AutomationCard";
 
-const projects = [
+type ProjectStatus = "Live" | "Demo";
+
+interface Project {
+  title: string;
+  description: string;
+  techStack: string[];
+  category: string;
+  liveUrl: string;
+  image: string;
+  isClientProject: boolean;
+  status?: ProjectStatus;
+}
+
+const projects: Project[] = [
   {
     title: "LinkFilo",
     description: "LinkFilo provides a straightforward way for you to upload any file and receive a unique shareable link instantly. This tool helps you share files with others quickly and easily, offering free file sharing capabilities for everyone.",
@@ -14,6 +27,7 @@ const projects = [
     liveUrl: "https://linkfilo.dnnengineer.com",
     image: "/linkfilo.png",
     isClientProject: false,
+    status: "Live",
   },
   {
     title: "GridLeap",
@@ -23,6 +37,7 @@ const projects = [
     liveUrl: "https://gridleap.vercel.app/",
     image: "/gridleap.png",
     isClientProject: false,
+    status: "Live",
   },
   {
     title: "Nimbus Essence",
@@ -31,7 +46,7 @@ const projects = [
     category: "E-Commerce",
     liveUrl: "https://nimbusessence.org",
     image: "/nimbusessence.png",
-    isClientProject: false,
+    isClientProject: true,
   },
   {
     title: "Flawless",
@@ -41,6 +56,7 @@ const projects = [
     liveUrl: "https://web.dnnengineer.com/cosmetics/",
     image: "/cosmetics.png",
     isClientProject: false,
+    status: "Demo",
   },
   {
     title: "Plumbers Guild of America",
@@ -50,6 +66,7 @@ const projects = [
     liveUrl: "https://web.dnnengineer.com/contractors/",
     image: "/contractors.png",
     isClientProject: false,
+    status: "Demo",
   },
   {
     title: "Real Estate",
@@ -59,6 +76,7 @@ const projects = [
     liveUrl: "https://web.dnnengineer.com/realestate/",
     image: "/realestate.png",
     isClientProject: false,
+    status: "Demo",
   },
   {
     title: "Cosmetics",
@@ -68,6 +86,7 @@ const projects = [
     liveUrl: "https://web.dnnengineer.com/cosmetics-1/",
     image: "/cosmetics-1.png",
     isClientProject: false,
+    status: "Demo",
   },
   {
     title: "The Burger Bistro Pizza Studio",
@@ -77,6 +96,7 @@ const projects = [
     liveUrl: "https://bistro-studio-site.wasmer.app/",
     image: "/bistro-studio-site.png",
     isClientProject: false,
+    status: "Demo",
   },
   {
     title: "NOCTE — A Night Worth Remembering",
@@ -86,6 +106,7 @@ const projects = [
     liveUrl: "https://nocte.wasmer.app/",
     image: "/nocte.png",
     isClientProject: false,
+    status: "Demo",
   },
 ];
 
@@ -214,9 +235,24 @@ export default function WorkPage() {
                 liveUrl={project.liveUrl}
                 image={project.image}
                 isClientProject={project.isClientProject}
+                status={project.status}
               />
             ))}
           </div>
+
+          <p
+            className="mt-8 text-center"
+            style={{
+              fontSize: "11px",
+              color: "rgba(148,163,184,0.6)",
+              letterSpacing: "0.3px",
+            }}
+          >
+            <span style={{ fontWeight: 700, color: "rgba(148,163,184,0.8)" }}>Live</span>
+            {" "}— real, deployed project ·{" "}
+            <span style={{ fontWeight: 700, color: "rgba(148,163,184,0.8)" }}>Demo</span>
+            {" "}— concept / personal build
+          </p>
 
         </div>
       </section>
