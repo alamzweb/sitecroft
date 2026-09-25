@@ -1,6 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
+import Link from "next/link";
 
 export interface ProjectCardProps {
   /** Project title */
@@ -23,6 +24,8 @@ export interface ProjectCardProps {
   icon?: ReactNode;
   /** Index for animation delay */
   index?: number;
+  /** Optional URL to a full case study page */
+  caseStudyUrl?: string;
 }
 
 export default function ProjectCard({
@@ -34,6 +37,7 @@ export default function ProjectCard({
   image,
   isClientProject = false,
   status,
+  caseStudyUrl,
   icon,
   index = 0,
 }: ProjectCardProps) {
@@ -179,29 +183,52 @@ export default function ProjectCard({
         ))}
       </div>
 
-      {/* Action Link */}
-      <a
-        href={liveUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 text-sm font-semibold text-brand-cyan hover:opacity-80 transition-opacity mt-auto"
-      >
-        View Live Site
-        <svg
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+      {/* Action Links */}
+      <div className="flex items-center gap-4 mt-auto flex-wrap">
+        <a
+          href={liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 text-sm font-semibold text-brand-cyan hover:opacity-80 transition-opacity"
         >
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-          <path d="M15 3h6v6" />
-          <path d="M10 14L21 3" />
-        </svg>
-      </a>
+          View Live Site
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            <path d="M15 3h6v6" />
+            <path d="M10 14L21 3" />
+          </svg>
+        </a>
+
+        {caseStudyUrl && (
+          <Link
+            href={caseStudyUrl}
+            className="inline-flex items-center gap-1 text-sm font-semibold text-brand-cyan hover:opacity-80 transition-opacity"
+          >
+            Read case study
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
+        )}
+      </div>
     </div>
   );
 }

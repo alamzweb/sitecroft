@@ -16,6 +16,7 @@ interface Project {
   image: string;
   isClientProject: boolean;
   status?: ProjectStatus;
+  caseStudyUrl?: string;
 }
 
 const projects: Project[] = [
@@ -47,6 +48,7 @@ const projects: Project[] = [
     liveUrl: "https://nimbusessence.org",
     image: "/nimbusessence.png",
     isClientProject: true,
+    caseStudyUrl: "/work/nimbus-essence",
   },
   {
     title: "Flawless",
@@ -386,6 +388,7 @@ export default function WorkPage() {
                 image={project.image}
                 isClientProject={project.isClientProject}
                 status={project.status}
+                caseStudyUrl={project.caseStudyUrl}
               />
             ))}
           </div>
