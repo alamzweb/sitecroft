@@ -128,7 +128,7 @@ export async function POST(request: NextRequest) {
 
               <!-- CTA Button -->
               <div style="text-align: center; margin-bottom: 28px;">
-                <a href="https://sitecroft.com" style="display: inline-block; background: linear-gradient(135deg, #3b82f6, #06b6d4); color: #fff; padding: 14px 32px; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 0 20px rgba(59,130,246,0.3);">Visit Sitecroft</a>
+                <a href="https://sitecroftdev.vercel.app" style="display: inline-block; background: linear-gradient(135deg, #3b82f6, #06b6d4); color: #fff; padding: 14px 32px; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 0 20px rgba(59,130,246,0.3);">Visit Sitecroft</a>
               </div>
 
               <!-- Promo Code Card -->
@@ -175,7 +175,7 @@ export async function POST(request: NextRequest) {
               <!-- Footer -->
               <div style="height: 1px; background: rgba(99,179,237,0.08); margin: 20px 0;"></div>
               <p style="color: #475569; font-size: 11px; text-align: center; line-height: 1.6; margin: 0;">
-                You're receiving this because you subscribed at sitecroft.com.<br>
+                You're receiving this because you subscribed at sitecroftdev.vercel.app.<br>
                 If this wasn't you, no worries — just ignore this email.
               </p>
 
