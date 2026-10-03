@@ -43,13 +43,13 @@ All updates, new pages, or UI tweaks must seamlessly match the established Sitec
 
 ## 6. Master Pricing Matrix Reference
 Map your dynamic React arrays exactly to this current service data:
-- Standard WordPress Site: From $50 (Template-driven execution)
-- Custom Code Website: From $100 (React / Next.js / Global CDNs)
-- WooCommerce Online Store: From $80 (Product pipelines & gateways)
-- WordPress Support & Tasks: From $5 (Plugin hooks, design edits)
-- Landing Page (WP or Pure Code): From $20 (Conversion architectures)
+- Standard WordPress Site: From $150 (Template-driven execution)
+- Custom Code Website: From $300 (React / Next.js / Global CDNs)
+- WooCommerce Online Store: From $250 (Product pipelines & gateways)
+- WordPress Support & Tasks: From $15 (Plugin hooks, design edits)
+- Landing Page (WP or Pure Code): From $60 (Conversion architectures)
 - Custom Feature & Page Edits: Based on work (Layout tweaks, feature additions)
-- WordPress Bug Fixing: From $10 (Critical fatal loops, layout crashes)
-- Website Maintenance: From $10/month (Backups, core updates, health monitoring)
-- Domain & Hosting Setup: From $10 (Registrar paths, Vercel production linkage)
+- WordPress Bug Fixing: From $25 (Critical fatal loops, layout crashes)
+- Website Maintenance: From $25/month (Backups, core updates, health monitoring)
+- Domain & Hosting Setup: From $25 (Registrar paths, Vercel production linkage)
 *(Note: Basic on-page SEO is always bundled as a free benefit inside custom builds. There is no individual standalone SEO service.)*

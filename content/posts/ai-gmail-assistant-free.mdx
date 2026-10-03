@@ -1,0 +1,194 @@
+---
+title: "How to build an AI Gmail Assistant that runs for free"
+description: "A fully automated Gmail assistant that reads unread emails, classifies them with AI, applies labels, and drafts replies — using GitHub Actions. No VPS, no paid automation platform."
+date: "2026-09-24"
+category: "AI & Automation"
+tags: ["ai", "automation", "gmail", "github-actions", "python"]
+---
+
+If you get more than a handful of emails a day, you already know the problem.
+
+Not the "too many emails" problem — the *sorting* problem. Every morning there's a mix of:
+
+- A genuine client question that needs a reply
+- A newsletter you'll never read
+- A meeting invite that needs a response
+- A cold sales pitch
+- A security alert
+- A collaboration request
+- Something that looks important but you can't tell at a glance
+
+You end up spending the first 20 minutes of every workday just deciding what each email is. Not responding to it — just *categorising* it. By the time you've sorted through everything, your best thinking hours are gone.
+
+This is a project I built to solve exactly that. It's a fully automated AI assistant that runs inside Gmail, sorts your inbox, applies labels, and even drafts replies for emails that need one.
+
+It runs in the cloud. It costs nothing to operate. It doesn't need a VPS, a server, or a paid automation platform.
+
+Here's how it works.
+
+## What the assistant actually does
+
+Every 10 minutes, the assistant runs quietly in the background. Here's what happens:
+
+1. It connects to your Gmail inbox via the Gmail API
+2. It pulls any unread messages
+3. It sends each email to Gemini AI for classification
+4. Based on the classification, it applies a Gmail label — To Respond, Collaboration, Meeting, Marketing, Cold Email, Notification, or Review Manually
+5. If the email needs a reply, Gemini generates a draft response and saves it directly in Gmail
+6. The email is marked as processed and won't be handled again
+
+You don't send anything automatically. The assistant only *prepares* the drafts — you review, edit, and send them yourself.
+
+That last point matters. Full automation of *sending* emails is risky. Full automation of *organising* them is transformative. This project sits in the safe middle.
+
+## Why not n8n, Zapier, or Make?
+
+The obvious way to build something like this is with an automation platform. n8n, Zapier, and Make all support Gmail triggers and AI steps.
+
+They also come with:
+
+- Monthly subscription costs ($20–$50/month for anything serious)
+- Rate limits on the free tiers
+- Data flowing through a third-party service
+- Limits on how much custom logic you can write
+
+For a personal automation like this, none of those are worth it.
+
+Instead, the assistant runs on **GitHub Actions** — GitHub's built-in automation platform. It executes your code on a schedule, with free minutes that cover this project easily. No subscription, no rate limits that matter, no third party sitting between you and your inbox.
+
+The tradeoff is that you have to write a bit of code. But the whole thing is designed to be beginner-friendly — you don't need deep Python knowledge, and you don't need to understand OAuth to get it running.
+
+## The tech stack
+
+Four pieces, all free:
+
+**Gmail API** — Google's official API for reading emails, applying labels, and creating drafts. Requires a one-time OAuth setup, then runs on its own.
+
+**Gemini AI** — Google's AI model. It reads each email's subject and body, decides what category it falls into, and generates draft replies when needed. Has a generous free tier.
+
+**GitHub Actions** — Runs the Python code on a schedule. Free tier is more than enough for personal use.
+
+**Python** — Ties everything together. Reads emails, sends them to Gemini, applies the labels and drafts based on the response.
+
+Total ongoing cost: **$0.**
+
+## What it looks like in practice
+
+Once it's running, Gmail starts looking different.
+
+Instead of one giant inbox, you get labeled sections that filter automatically. When you open Gmail, you can immediately see:
+
+- How many emails need a response
+- Which are meeting requests
+- Which are collaborations
+- Which are sales pitches you can ignore
+
+Emails that need a reply already have a draft waiting — professionally worded, in your tone, ready for you to review and send.
+
+The first time you open Gmail and see it already sorted, it feels like getting an assistant for free.
+
+## What problems it solves
+
+**Decision fatigue.** You stop deciding what each email is. The AI does that.
+
+**Response latency.** Drafts are waiting for you instead of you starting from scratch. For routine enquiries, you can often just review and send.
+
+**Missing important emails.** Instead of scanning subject lines and hoping you don't miss something, you have a labeled "To Respond" pile that tells you exactly where attention is needed.
+
+**Inbox overwhelm.** Notifications, marketing, and cold emails get quietly filed away. You see them if you want to, but they don't clutter your main view.
+
+## What it doesn't do (deliberately)
+
+**It doesn't send emails.** Every draft requires your review. You stay in control.
+
+**It doesn't read your archived emails.** Only unread messages are processed. Your history stays untouched.
+
+**It doesn't act on emails it's unsure about.** Low-confidence classifications go to "Review Manually" instead of guessing.
+
+**It doesn't lock you into a subscription.** It's your code, your repo, your Gmail account. If you stop using it, you just delete the GitHub repo.
+
+## Who this is for
+
+- **Freelancers and solo developers** drowning in client enquiries, cold outreach, and newsletters
+- **Founders and creators** who get a mix of important messages and noise
+- **Anyone with a messy inbox** who's tired of manually sorting every morning
+- **Developers** who want a real AI/automation project to learn from
+
+If you're getting fewer than 20 emails a day, this is overkill. If you're getting 50+, it's a genuine upgrade to your daily workflow.
+
+## How to set it up
+
+The setup is completely free and takes about an hour end-to-end. The main steps are:
+
+1. **Create a GitHub repository** — where the automation lives
+2. **Get a Gemini API key** — free from Google AI Studio
+3. **Set up a Google Cloud project** — enables Gmail API access
+4. **Generate OAuth credentials** — a one-time authorisation
+5. **Store your keys in GitHub Secrets** — secure storage for your credentials
+6. **Enable the GitHub Actions workflow** — the automation starts running
+
+You don't need prior experience with Gmail APIs, OAuth, or GitHub Actions. The workflow is designed to be configurable for anyone who can follow instructions and copy-paste.
+
+Every label is created automatically during the first run — you don't need to set up Gmail labels manually.
+
+## Customising it for your needs
+
+The assistant is meant to be a starting point. Once it's running, you can:
+
+- **Add your own labels** — Client, Support, Invoice, Urgent, whatever fits your workflow
+- **Change the classification rules** — make it stricter, add categories, adjust thresholds
+- **Change the draft style** — formal, casual, friendly, technical — it's a prompt you can edit
+- **Adjust the frequency** — every 5, 10, 15, or 30 minutes
+- **Expand it** — daily email summaries, Slack notifications, priority scoring, CRM integration
+
+Because the code is yours, every part of it is editable.
+
+## The full setup guide
+
+I've written a complete step-by-step guide that covers every part of this — from creating the GitHub repository to running the first successful workflow.
+
+It walks through:
+
+- Setting up the Gemini API key
+- Creating the Google Cloud project
+- Configuring OAuth correctly (this is where most people get stuck)
+- Generating the authentication token
+- Storing credentials safely in GitHub Secrets
+- Enabling the scheduled workflow
+- Troubleshooting common errors
+
+Every step has screenshots, exact commands to run, and explanations of why each step matters.
+
+[Download the free setup guide](/automations/guides/AI_Gmail_Assistant_Guide.pdf)
+
+Everything is included — the full guide, the workflow files, and setup assistance if you get stuck.
+
+## The bigger idea
+
+This kind of project wouldn't have been possible without AI being available cheaply. Five years ago, building an email classifier required training a model, and generating replies required building a template system with a lot of manual rules.
+
+Today, with Gemini and a few dozen lines of Python, you get something that actually understands context, tone, and intent. And it costs nothing to run.
+
+The takeaway isn't "build this specific thing." It's that **AI has made a whole category of personal automation newly possible** — and most of them can run for free on platforms like GitHub Actions.
+
+If you've got a repetitive task in your workflow, the question is no longer "can I afford to automate this?" It's "why haven't I automated this yet?"
+
+You can see this automation and others I've built on the [automations section of my work page](/work#automations).
+
+## Can I build this for you?
+
+If you run a business or work as a freelancer and this kind of automation would save you real time, I build custom solutions too.
+
+Not just email assistants — anything repetitive in your workflow that could be automated with AI:
+
+- Email sorting and drafting
+- Lead qualification and follow-up
+- Content pipelines and scheduling
+- Customer support triage
+- Data entry and report generation
+- Internal notifications and alerts
+- Anything else you're doing manually that could run itself
+
+Every solution is built the same way — free to run, owned by you, no ongoing subscription to a platform.
+
+[Get in touch](/contact) if you want to discuss an automation for your workflow. Or [explore my other services](/services) if you need a website first.

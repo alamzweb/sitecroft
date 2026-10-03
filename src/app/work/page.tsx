@@ -411,7 +411,7 @@ export default function WorkPage() {
       </section>
 
       {/* Automations Section */}
-      <section className="relative py-20 px-6" style={{ background: "#060b14" }}>
+      <section id="automations" className="relative py-20 px-6" style={{ background: "#060b14" }}>
         <div className="max-w-6xl mx-auto">
           <div className="section-label mb-6">Automations</div>
           <h2 className="section-title mb-4">Workflow Automations</h2>
