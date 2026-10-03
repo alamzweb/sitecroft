@@ -30,14 +30,14 @@ const faqData = [
     items: [
       { q: "What does a custom-code website include?", a: "A fully hand-coded website using your choice of React, Next.js, Vite, or plain HTML/CSS/JS. It includes Vercel deployment on a global CDN, fully responsive design, custom animations and interactions, basic on-page SEO, and complete source code delivery." },
       { q: "Why choose a custom-code site over WordPress?", a: "Custom-coded sites load faster, score higher on Core Web Vitals, give you complete design freedom without template limitations, and are deployed on Vercel for blazing performance. They're ideal for brands that need maximum speed, flexibility, and a unique online presence." },
-      { q: "Can I get a landing page as custom code or WordPress?", a: "Both options are available. I build conversion-driven landing pages in WordPress or as standalone custom-coded pages — whichever fits your setup best. Prices start from $20." },
+      { q: "Can I get a landing page as custom code or WordPress?", a: "Both options are available. I build conversion-driven landing pages in WordPress or as standalone custom-coded pages — whichever fits your setup best. Prices start from $60." },
       { q: "Do you handle hosting and deployment for custom sites?", a: "Yes. Custom-coded sites are deployed on Vercel (which has a generous free tier). I handle the full deployment process — domain configuration, SSL setup, and launch. Ongoing maintenance packages are also available." },
     ],
   },
   {
     category: "Pricing & Payment",
     items: [
-      { q: "How much does a website cost?", a: "Prices vary based on scope and complexity: Standard WordPress sites from $50, Custom-coded websites from $100, WooCommerce stores from $80, Landing pages from $20, Bug fixing from $10, and Maintenance from $10/month. Contact me with your requirements for an accurate quote." },
+      { q: "How much does a website cost?", a: "Prices vary based on scope and complexity: Standard WordPress sites from $150, Custom-coded websites from $300, WooCommerce stores from $250, Landing pages from $60, Bug fixing from $25, and Maintenance from $25/month. Contact me with your requirements for an accurate quote." },
       { q: "Do you offer refunds?", a: "Refund availability depends on the project stage and service type. I work with revisions until you're satisfied to avoid this situation. Please review the Terms of Service for full details." },
       { q: "How many revisions do I get?", a: "I offer revisions until you're genuinely satisfied with the result. The goal is for you to be happy with what's delivered — not to limit your feedback." },
     ],
@@ -46,7 +46,7 @@ const faqData = [
     category: "After Delivery",
     items: [
       { q: "What happens after the website is launched?", a: "I stay available after launch for any small fixes or adjustments needed. For ongoing support, I also offer monthly maintenance packages to keep your site updated, secure, and running smoothly." },
-      { q: "Do you offer ongoing maintenance?", a: "Yes. Monthly maintenance packages start from $10/month and include WordPress updates (for WP sites), plugin updates, backups, security checks, and minor fixes." },
+      { q: "Do you offer ongoing maintenance?", a: "Yes. Monthly maintenance packages start from $25/month and include WordPress updates (for WP sites), plugin updates, backups, security checks, and minor fixes." },
       { q: "Can I contact you if something breaks after delivery?", a: "Absolutely. If something I built breaks shortly after delivery due to my work, I'll fix it at no extra charge. For issues caused by third-party changes or external updates, my bug fixing service applies." },
     ],
   },

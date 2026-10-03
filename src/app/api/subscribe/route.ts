@@ -142,7 +142,7 @@ export async function POST(request: NextRequest) {
                 </p>
                 <div style="background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.12); border-radius: 8px; padding: 14px 16px; margin-bottom: 14px; text-align: left;">
                   <p style="color: #63b3ed; font-size: 13px; font-weight: 600; margin-bottom: 4px;">Option A</p>
-                  <p style="color: #94a3b8; font-size: 12px; margin: 0;">Free Domain & Hosting Setup (valued at $10)</p>
+                  <p style="color: #94a3b8; font-size: 12px; margin: 0;">Free Domain & Hosting Setup (valued at $25)</p>
                 </div>
                 <div style="background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.12); border-radius: 8px; padding: 14px 16px; margin-bottom: 18px; text-align: left;">
                   <p style="color: #63b3ed; font-size: 13px; font-weight: 600; margin-bottom: 4px;">Option B</p>

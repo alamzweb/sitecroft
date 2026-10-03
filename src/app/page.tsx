@@ -144,31 +144,31 @@ export default function HomePage() {
               <div className="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg></div>
               <h3>Standard WordPress Site</h3>
               <p>Professional websites built using optimized pre-made templates — fast to launch, fully responsive, and easy to manage.</p>
-              <div className="service-tag">From $50</div>
+              <div className="service-tag">From $150</div>
             </div>
             <div className="service-card">
               <div className="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" strokeWidth="2"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg></div>
               <h3>Custom Code Website</h3>
               <p>High-performance, modern hand-coded websites (HTML, React, Next.js, Vite) deployed on Vercel for ultimate page speeds and clean SEO.</p>
-              <div className="service-tag">From $100</div>
+              <div className="service-tag">From $300</div>
             </div>
             <div className="service-card">
               <div className="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" strokeWidth="2"><circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" /><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" /></svg></div>
               <h3>WooCommerce Store</h3>
               <p>Full e-commerce infrastructure setup complete with secure checkout gateways, product variations, and order management.</p>
-              <div className="service-tag">From $80</div>
+              <div className="service-tag">From $250</div>
             </div>
             <div className="service-card">
               <div className="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg></div>
               <h3>WordPress Support & Tasks</h3>
               <p>On-demand plugin setups, page additions, blog configurations, or any other WordPress task — handled quickly and professionally.</p>
-              <div className="service-tag">From $5</div>
+              <div className="service-tag">From $15</div>
             </div>
             <div className="service-card">
               <div className="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" strokeWidth="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg></div>
               <h3>Landing Page</h3>
               <p>A focused, conversion-driven landing page for your product, service, or campaign — built in WordPress or as custom code.</p>
-              <div className="service-tag">From $20</div>
+              <div className="service-tag">From $60</div>
             </div>
             <div className="service-card">
               <div className="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6366f1" strokeWidth="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" /></svg></div>
@@ -180,19 +180,19 @@ export default function HomePage() {
               <div className="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg></div>
               <h3>Bug & Error Fixing</h3>
               <p>Fast diagnostic repairs targeting fatal server codes, white screens, plugin conflicts, and active runtime failures.</p>
-              <div className="service-tag">From $10</div>
+              <div className="service-tag">From $25</div>
             </div>
             <div className="service-card">
               <div className="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg></div>
               <h3>Website Maintenance</h3>
               <p>Ongoing background protection. Keeping plugins safe, environments backed up, and your site error-free every month.</p>
-              <div className="service-tag">From $10/mo</div>
+              <div className="service-tag">From $25/mo</div>
             </div>
             <div className="service-card">
               <div className="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ec4899" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg></div>
               <h3>Domain & Hosting Setup</h3>
               <p>Full done-for-you setup — I buy, configure, and launch your hosting and domain so you're ready to go without the tech headache.</p>
-              <div className="service-tag">From $10</div>
+              <div className="service-tag">From $25</div>
             </div>
           </div>
         </div>

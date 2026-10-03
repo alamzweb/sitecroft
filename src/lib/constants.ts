@@ -49,15 +49,15 @@ export interface PricingItem {
 
 export const PRICING: PricingItem[] = [
   // ── WordPress Services ──
-  { title: 'Standard WordPress Site', startingPrice: '$50', description: 'Template-driven execution', category: 'wordpress' },
-  { title: 'WooCommerce Online Store', startingPrice: '$80', description: 'Product pipelines & gateways', category: 'wordpress' },
-  { title: 'WordPress Support & Tasks', startingPrice: '$5', description: 'Plugin hooks, design edits', category: 'wordpress' },
-  { title: 'Landing Page (WordPress)', startingPrice: '$20', description: 'Conversion architectures on WordPress', category: 'wordpress' },
-  { title: 'WordPress Bug Fixing', startingPrice: '$10', description: 'Critical fatal loops, layout crashes', category: 'wordpress' },
-  { title: 'Website Maintenance', startingPrice: '$10/month', description: 'Backups, core updates, health monitoring', category: 'wordpress' },
+  { title: 'Standard WordPress Site', startingPrice: '$150', description: 'Template-driven execution', category: 'wordpress' },
+  { title: 'WooCommerce Online Store', startingPrice: '$250', description: 'Product pipelines & gateways', category: 'wordpress' },
+  { title: 'WordPress Support & Tasks', startingPrice: '$15', description: 'Plugin hooks, design edits', category: 'wordpress' },
+  { title: 'Landing Page (WordPress)', startingPrice: '$60', description: 'Conversion architectures on WordPress', category: 'wordpress' },
+  { title: 'WordPress Bug Fixing', startingPrice: '$25', description: 'Critical fatal loops, layout crashes', category: 'wordpress' },
+  { title: 'Website Maintenance', startingPrice: '$25/month', description: 'Backups, core updates, health monitoring', category: 'wordpress' },
   // ── Coded Websites ──
-  { title: 'Custom Code Website', startingPrice: '$100', description: 'React / Next.js / HTML / CSS / JS', category: 'coded' },
-  { title: 'Landing Page (Pure Code)', startingPrice: '$20', description: 'Conversion architectures in raw code', category: 'coded' },
+  { title: 'Custom Code Website', startingPrice: '$300', description: 'React / Next.js / HTML / CSS / JS', category: 'coded' },
+  { title: 'Landing Page (Pure Code)', startingPrice: '$60', description: 'Conversion architectures in raw code', category: 'coded' },
   { title: 'Custom Feature & Page Edits', startingPrice: 'Based on work', description: 'Layout tweaks, feature additions on coded sites', category: 'coded' },
-  { title: 'Domain & Hosting Setup', startingPrice: '$10', description: 'Registrar paths, Vercel production linkage', category: 'coded' },
+  { title: 'Domain & Hosting Setup', startingPrice: '$25', description: 'Registrar paths, Vercel production linkage', category: 'coded' },
 ] as const;
