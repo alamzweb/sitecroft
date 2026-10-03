@@ -21,7 +21,7 @@ const PROFILE = {
   name: "Saad",
   role: "Web Developer & Automation Engineer",
   location: "Karachi, Pakistan",
-  photo: "/image.png",
+  photo: "/saad.png",
   description:
     "Based in Karachi, Pakistan. I build high-performance websites using React, Next.js, and WordPress, alongside robust automation workflows using n8n. Sitecroft is my dedicated development service — built to deliver clean, fast, and functional web solutions for businesses and individuals worldwide.",
   skills: [

@@ -7,10 +7,8 @@ const POSTS_DIR = path.join(process.cwd(), "content", "posts");
 
 export type PostCategory =
   | "Comparison"
-  | "Tutorial"
   | "Freelancing"
-  | "AI"
-  | "Other";
+  | "AI & Automation"
 
 export interface PostFrontmatter {
   title: string;

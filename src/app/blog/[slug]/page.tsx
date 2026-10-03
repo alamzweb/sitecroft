@@ -3,10 +3,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllSlugs, getPostBySlug, getAllPosts } from "@/lib/posts";
-import { useMDXComponents } from "@/mdx-components";
+import { getMDXComponents } from "@/mdx-components";
 import AuthorBlock from "@/components/blog/AuthorBlock";
 import ShareLinks from "@/components/blog/ShareLinks";
 import PostCard from "@/components/blog/PostCard";
+import remarkGfm from "remark-gfm";
 
 const SITE_URL = "https://sitecroftdev.vercel.app";
 
@@ -64,7 +65,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
   if (!post) notFound();
 
-  const components = useMDXComponents({});
+  const components = getMDXComponents({});
   const allPosts = getAllPosts();
   const related = allPosts
     .filter((p) => p.slug !== post.slug && p.category === post.category)
@@ -143,7 +144,15 @@ export default async function PostPage({ params }: PostPageProps) {
           )}
 
           <div className="post-body">
-            <MDXRemote source={post.content} components={components} />
+            <MDXRemote
+              source={post.content}
+              components={components}
+              options={{
+                mdxOptions: {
+                  remarkPlugins: [remarkGfm],
+                },
+              }}
+            />
           </div>
 
           {post.tags.length > 0 && (

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface AuthorBlockProps {
   author: string;
@@ -14,13 +15,14 @@ export default function AuthorBlock({ author, role }: AuthorBlockProps) {
         border: "1px solid rgba(99,179,237,0.1)",
       }}
     >
-      <div
-        className="w-14 h-14 rounded-full flex-shrink-0 flex items-center justify-center text-lg font-bold text-white"
-        style={{
-          background: "linear-gradient(135deg, #3b82f6, #06b6d4)",
-        }}
-      >
-        {author.charAt(0).toUpperCase()}
+      <div className="w-14 h-14 rounded-full flex-shrink-0 overflow-hidden">
+        <Image
+          src="/saad.png"
+          alt={author}
+          width={56}
+          height={56}
+          className="w-full h-full object-cover"
+        />
       </div>
 
       <div className="flex-1 min-w-0">

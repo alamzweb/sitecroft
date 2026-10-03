@@ -1,7 +1,7 @@
 import type { MDXComponents } from "mdx/types";
 import Link from "next/link";
 
-export function useMDXComponents(components: MDXComponents): MDXComponents {
+export function getMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h2: ({ children }) => (
       <h2 className="mt-12 mb-4 text-2xl md:text-3xl font-bold text-white tracking-tight">
@@ -68,19 +68,27 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     table: ({ children }) => (
       <div className="my-8 overflow-x-auto rounded-xl border border-white/10">
-        <table className="w-full text-sm">{children}</table>
+        <table className="w-full text-sm border-collapse">
+          {children}
+        </table>
       </div>
     ),
     thead: ({ children }) => (
-      <thead className="bg-white/5 text-slate-300">{children}</thead>
+      <thead className="bg-white/[0.04]">{children}</thead>
+    ),
+    tbody: ({ children }) => <tbody>{children}</tbody>,
+    tr: ({ children }) => (
+      <tr className="border-b border-white/5 last:border-b-0">
+        {children}
+      </tr>
     ),
     th: ({ children }) => (
-      <th className="px-4 py-3 text-left font-semibold text-white border-b border-white/10">
+      <th className="px-4 py-3 text-left text-sm font-bold text-white">
         {children}
       </th>
     ),
     td: ({ children }) => (
-      <td className="px-4 py-3 text-slate-400 border-b border-white/5">
+      <td className="px-4 py-3 text-sm text-slate-400 align-top">
         {children}
       </td>
     ),
