@@ -1372,3 +1372,121 @@ canvas#particles{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0
     height: 24px;
   }
 }
+
+/* ============================================
+   PROJECT INTAKE FORM (/start-a-project)
+   Matches the existing dark / cyan-blue aesthetic
+   ============================================ */
+.intake-section{padding:0 60px 90px;background:#060b14;}
+.intake-card{max-width:800px;margin:0 auto;background:#0a1020;border:1px solid rgba(99,179,237,0.12);border-radius:18px;padding:36px;position:relative;overflow:hidden;}
+.intake-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#3b82f6,#06b6d4);}
+
+/* ── Progress indicator ── */
+.intake-progress{margin-bottom:28px;}
+.intake-progress-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;}
+.intake-step-count{font-size:13px;font-weight:700;color:#06b6d4;}
+.intake-step-name{font-size:12px;color:#64748b;}
+.intake-progress-track{height:6px;background:rgba(99,179,237,0.1);border-radius:99px;overflow:hidden;}
+.intake-progress-bar{height:100%;background:linear-gradient(90deg,#3b82f6,#06b6d4);border-radius:99px;transition:width 0.35s ease;}
+
+/* ── Step shell ── */
+.intake-step{border:none;padding:0;margin:0;}
+.intake-step .form-sub{margin-bottom:20px;}
+
+/* ── Field helpers ── */
+.field-hint{font-size:12px;color:#64748b;margin:-2px 0 10px;}
+.field-meta{font-size:11px;color:#64748b;text-align:right;margin-top:4px;}
+.field-error{display:flex;align-items:flex-start;gap:6px;font-size:12px;line-height:1.5;color:#f87171;margin-top:7px;}
+.field-error::before{content:'';flex:0 0 auto;width:14px;height:14px;margin-top:1px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23f87171' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='12' y1='8' x2='12' y2='12'/%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:14px 14px;}
+.input-error,.form-field input.input-error,.form-field textarea.input-error{border-color:#f87171 !important;}
+.form-field input.input-error:focus,.form-field textarea.input-error:focus{border-color:#f87171;box-shadow:0 0 0 3px rgba(248,113,113,0.15);}
+
+/* ── Service pill toggles ── */
+.intake-pills{display:flex;flex-wrap:wrap;gap:10px;}
+.intake-pill{display:inline-flex;align-items:center;gap:10px;max-width:100%;background:#060b14;border:1px solid rgba(99,179,237,0.18);border-radius:10px;padding:10px 14px;font-size:13px;color:#94a3b8;cursor:pointer;transition:border-color 0.2s,color 0.2s,background 0.2s;user-select:none;}
+.intake-pill::before{content:'';flex:0 0 auto;width:18px;height:18px;border:1.5px solid rgba(148,163,184,0.5);border-radius:5px;background:#060b14;background-repeat:no-repeat;background-position:center;background-size:12px 12px;transition:border-color 0.2s,background-color 0.2s;}
+.intake-pill span{min-width:0;overflow-wrap:anywhere;}
+.intake-pill input{position:absolute;opacity:0;width:0;height:0;}
+.intake-pill:hover{border-color:rgba(6,182,212,0.4);color:#e2e8f0;}
+.intake-pill:hover::before{border-color:#06b6d4;}
+.intake-pill.active{background:rgba(6,182,212,0.1);border-color:#06b6d4;color:#fff;}
+.intake-pill.active::before{background-color:#06b6d4;border-color:#06b6d4;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");}
+.intake-pill:has(input:focus-visible){border-color:#06b6d4;box-shadow:0 0 0 3px rgba(6,182,212,0.18);}
+.intake-pill:has(input:disabled),.intake-pill.disabled{opacity:0.5;cursor:not-allowed;}
+.intake-pill:has(input:disabled):hover,.intake-pill.disabled:hover{border-color:rgba(99,179,237,0.18);color:#94a3b8;}
+
+/* ── Radio options ── */
+.intake-radios{display:flex;flex-direction:column;gap:10px;}
+.intake-radio{position:relative;display:flex;align-items:center;gap:12px;background:#060b14;border:1px solid rgba(99,179,237,0.18);border-radius:10px;padding:12px 16px;font-size:14px;color:#94a3b8;cursor:pointer;transition:border-color 0.2s,color 0.2s,background 0.2s;}
+.intake-radio::before{content:'';flex:0 0 auto;width:18px;height:18px;border-radius:50%;border:1.5px solid rgba(148,163,184,0.5);background:#060b14;transition:border-color 0.2s,background-color 0.2s,box-shadow 0.2s;}
+.intake-radio input{position:absolute;opacity:0;width:0;height:0;}
+.intake-radio:hover{border-color:rgba(6,182,212,0.4);color:#e2e8f0;}
+.intake-radio:hover::before{border-color:#06b6d4;}
+.intake-radio.active{background:rgba(6,182,212,0.1);border-color:#06b6d4;color:#fff;}
+.intake-radio.active::before{border-color:#06b6d4;background-color:#06b6d4;background-image:radial-gradient(circle at center,#fff 0 3.5px,rgba(255,255,255,0) 4px);}
+.intake-radio:has(input:focus-visible){border-color:#06b6d4;box-shadow:0 0 0 3px rgba(6,182,212,0.18);}
+.intake-radio:has(input:disabled),.intake-radio.disabled{opacity:0.5;cursor:not-allowed;}
+.intake-radio:has(input:disabled):hover,.intake-radio.disabled:hover{border-color:rgba(99,179,237,0.18);color:#94a3b8;}
+.intake-radio:has(input:disabled):hover::before,.intake-radio.disabled:hover::before{border-color:rgba(148,163,184,0.5);}
+
+/* ── Conditional block ── */
+.intake-conditional{margin-top:20px;padding:20px;background:#060b14;border:1px solid rgba(99,179,237,0.12);border-radius:12px;}
+.intake-conditional-title{font-size:13px;font-weight:700;color:#06b6d4;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.5px;}
+
+/* ── Nav buttons ── */
+.intake-nav{display:flex;align-items:center;gap:14px;margin-top:28px;}
+.intake-nav-btn{width:auto;flex:0 0 auto;justify-content:center;display:inline-flex;align-items:center;gap:8px;}
+.intake-nav-btn:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(6,182,212,0.25);}
+.intake-nav-continue{margin-left:auto;}
+
+/* ── Submission error banner (scoped to the intake card) ── */
+.intake-card .form-status.form-error{display:flex;align-items:flex-start;gap:8px;text-align:left;line-height:1.5;}
+.intake-card .form-status.form-error svg{flex:0 0 auto;margin-top:1px;}
+
+/* ── Review step ── */
+.review-section{margin-bottom:22px;}
+.review-section-title{display:inline-flex;align-items:center;gap:6px;background:none;border:none;padding:0;margin-bottom:10px;font-size:13px;font-weight:700;color:#06b6d4;cursor:pointer;text-transform:uppercase;letter-spacing:0.5px;font-family:var(--font-dm-sans),"DM Sans",system-ui,sans-serif;}
+.review-section-title:hover{color:#3b82f6;}
+.review-row{display:grid;grid-template-columns:150px 1fr auto;gap:12px;align-items:start;padding:10px 0;border-bottom:1px solid rgba(99,179,237,0.08);}
+.review-label{font-size:12px;color:#64748b;}
+.review-value{font-size:14px;color:#e2e8f0;white-space:pre-wrap;word-break:break-word;line-height:1.6;}
+.review-empty{color:#475569;}
+.review-edit{display:inline-flex;align-items:center;gap:4px;background:none;border:none;padding:2px 6px;font-size:12px;color:#64748b;cursor:pointer;border-radius:6px;transition:color 0.2s,background 0.2s;font-family:var(--font-dm-sans),"DM Sans",system-ui,sans-serif;}
+.review-edit:hover{color:#06b6d4;background:rgba(6,182,212,0.08);}
+.review-edit:focus-visible,.review-section-title:focus-visible{outline:none;color:#06b6d4;box-shadow:0 0 0 3px rgba(6,182,212,0.25);border-radius:6px;}
+.intake-privacy{margin-top:24px;padding:14px 16px;background:#060b14;border:1px solid rgba(99,179,237,0.1);border-radius:10px;font-size:12px;color:#64748b;line-height:1.7;}
+.intake-privacy strong{color:#94a3b8;}
+
+/* ── Success ── */
+.intake-success{text-align:center;padding:12px 0;}
+.intake-success-icon{display:flex;justify-content:center;margin-bottom:16px;}
+
+/* ── Honeypot (hidden from users & screen readers) ── */
+.intake-honeypot{position:absolute !important;left:-9999px !important;width:1px;height:1px;overflow:hidden;}
+
+/* ── Spinner ── */
+.spin{animation:intake-spin 1s linear infinite;}
+@keyframes intake-spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce){
+  .intake-progress-bar{transition:none;}
+  .spin{animation-duration:2.4s;}
+  .intake-pill,.intake-radio,.review-edit{transition:none;}
+}
+
+/* ── Responsive ── */
+@media(max-width:1024px){.intake-section{padding-left:40px;padding-right:40px;}}
+@media(max-width:768px){
+  .intake-section{padding-left:20px;padding-right:20px;padding-bottom:60px;}
+  .intake-card{padding:24px;}
+  .review-row{grid-template-columns:1fr;gap:4px;}
+  .review-edit{justify-self:start;}
+}
+@media(max-width:480px){
+  .intake-section{padding-left:16px;padding-right:16px;}
+  .intake-card{padding:18px;border-radius:14px;}
+  .intake-nav{gap:10px;}
+  .intake-nav-btn{width:auto;flex:1 1 auto;padding-left:16px;padding-right:16px;}
+  .intake-nav-continue{margin-left:0;}
+}
