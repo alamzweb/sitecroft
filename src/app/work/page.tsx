@@ -225,7 +225,7 @@ const projects: Project[] = [
     description: "A fully working kanban board with real drag-and-drop, inline column renaming, card editing, priorities, labels, due dates, live search, and localStorage persistence — built with pure HTML, CSS & JavaScript.",
     techStack: ["HTML", "CSS", "JavaScript"],
     category: "App",
-    liveUrl: "https://flow.wasmer.app/",
+    liveUrl: "https://flow1.wasmer.app/",
     image: "/flow.png",
     isClientProject: false,
     status: "Demo",
