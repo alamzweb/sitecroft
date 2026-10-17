@@ -1,0 +1,186 @@
+---
+title: "What to do when your web developer disappears"
+description: "A practical recovery guide for when your web developer stops responding — how to secure your site, regain access, and hire someone new without starting over."
+date: "2026-10-17"
+category: "Freelancing"
+tags: ["hiring", "freelancing", "web-development", "clients"]
+---
+
+It's a story that gets told constantly in developer forums and business owner groups.
+
+You hired someone to build your website. It worked. They were responsive during the project. You paid them. They handed it over. And then — six months or a year later — you need a change made, and they don't respond. No email. No phone. No message. Just silence.
+
+Or worse: you never got full admin access in the first place, and now you're locked out of your own website.
+
+This isn't rare. It happens because the freelance world has almost no enforcement. There's no professional board to complain to, no union, no standard for handover. A developer can disappear with your admin credentials and face zero professional consequences.
+
+If you're in this situation right now, here's what to do — step by step.
+
+## First — Stay calm and assess
+
+Before you panic or send angry emails, figure out what you actually have access to and what you don't.
+
+**Check these things:**
+
+1. **Can you log into your hosting account?** (Hostinger, SiteGround, Vercel, wherever the site lives)
+2. **Can you log into your domain registrar?** (Where you bought your domain — Namecheap, GoDaddy, etc.)
+3. **Can you log into your WordPress admin?** (If it's a WordPress site)
+4. **Do you have access to the FTP or SSH credentials?**
+5. **Do you have any backup of the site?**
+
+If the answer to all of these is "yes" — good news. Your developer might be slow to respond, but you still have full control. The recovery is annoying but not catastrophic.
+
+If the answer to any of these is "no" — you have a bigger problem. Keep reading.
+
+## If you don't have full access — this is what to do
+
+The three things you need to control on any website are:
+
+- **The domain**
+- **The hosting**
+- **The code/content**
+
+If your developer controls any of these, you need to get them back.
+
+### Step 1 — Secure the domain first
+
+The domain is the most important. If your developer controls the registrar account, they could let it expire, transfer it, or hold it hostage.
+
+**What to do:**
+
+- **Check who owns the domain** using a WHOIS lookup (whois.icann.org)
+- If it's registered to your name — great. You can often recover access by providing ID to the registrar.
+- If it's registered to the developer's name — you have a problem. You'll need to contact the registrar and explain the situation. Some registrars will help you recover ownership if you can prove the site is yours (invoices, contracts, correspondence).
+
+**Important:** the domain cannot be transferred or deleted without the current owner's permission. But it also cannot be recovered without convincing the registrar. Act fast if the renewal date is approaching.
+
+### Step 2 — Contact the developer through every channel
+
+Before assuming the worst, actually try to reach them:
+
+- **Every email you have** (personal, business, any address)
+- **Every phone number** they've given you
+- **Their website contact form**
+- **LinkedIn, X, Instagram, any social media**
+- **Their current employer** (if you can find it)
+
+Sometimes the answer is mundane — they changed their email, moved countries, or had a personal emergency. Give them 14 days to respond to a polite, direct message before escalating.
+
+**What to write:**
+
+> "Hi [Name], I've been trying to reach you about [specific issue with the site] and haven't heard back. I need admin access to [hosting/domain/WordPress] to make some updates. Can you please respond by [specific date]? If I don't hear back, I'll need to move forward with recovery on my own, which may require contacting the hosting provider."
+
+This serves two purposes: it shows you're serious, and it creates a record that you tried to resolve things amicably.
+
+### Step 3 — Contact the hosting provider
+
+If your site is on hosting the developer set up (in their name), contact the host directly.
+
+**What to explain:**
+
+- You own the website (provide any evidence — invoices, contract, email history)
+- You've lost contact with the developer
+- You need access to your site
+
+Every major host has a policy for this. Some are helpful, some require strict documentation. The key is proof — the more evidence you have that the site is yours, the better your chances.
+
+**What counts as proof:**
+
+- Contract or agreement with the developer
+- Invoices showing you paid for the site
+- Email correspondence about the project
+- Any documentation that references you as the site owner
+
+If you have none of these, you're going to have a much harder time.
+
+### Step 4 — Recover WordPress admin (if applicable)
+
+If it's a WordPress site and you have hosting access but not WordPress admin:
+
+**Via hosting panel (phpMyAdmin):**
+
+1. Log into your hosting's phpMyAdmin
+2. Find the WordPress database
+3. Open the `wp_users` table
+4. Find your username
+5. Change the password field to a new MD5 hash (or reset through the interface if your host supports it)
+
+Your hosting provider's support team can walk you through this if you're not comfortable doing it yourself.
+
+### Step 5 — If you have no access at all
+
+This is the worst-case scenario. If you have no hosting access, no domain access, no WordPress access, and the developer is unreachable — you have three options:
+
+**Option A — Recover via the hosting provider and registrar, as above.** Slow but possible.
+
+**Option B — Rebuild from scratch.** Painful, but if the domain is recoverable, you keep your brand recognition and SEO history. New hosting, new site, redirect everything.
+
+**Option C — Legal action.** If the site has significant value and the developer has clearly acted in bad faith, a lawyer's letter can sometimes produce results. This is expensive and slow, but sometimes the only option.
+
+**Option D — Report to authorities.** If you're outside the developer's jurisdiction (which is common in international freelance work), this rarely produces results. But some countries have consumer protection bodies that will follow up.
+
+## How to prevent this — for next time
+
+Every situation like this is preventable with three simple steps:
+
+### 1. Buy the domain yourself
+
+Never let a developer buy your domain in their name. Buy it directly — from Namecheap, GoDaddy, or wherever — and give the developer access to build the site, not to own the domain.
+
+**Cost: $10–$15/year.** Worth every penny of control.
+
+### 2. Set up hosting in your own name
+
+The hosting account should be yours. The developer should have access as a collaborator or a temporary user, but you own the account.
+
+**Cost: $5–$30/month.** Same principle.
+
+### 3. Get all credentials before final payment
+
+Make it a clause in your contract: "Final payment is contingent on full admin access being handed over." Then actually verify it before you pay.
+
+**What to receive:**
+- Hosting panel login (with your own account created)
+- Domain registrar login (with the domain in your name)
+- WordPress admin login (as an admin user, not just a contributor)
+- FTP/SSH credentials
+- Any third-party service logins (email, CRM, analytics)
+- Documentation of what was built and how
+
+A good developer will hand all of this over without being asked. A bad one will drag their feet. Either way, you'll know before you're stuck.
+
+## What to say to the developer who does respond
+
+If they eventually respond — even after weeks of silence — assume the best. Ask:
+
+1. Why didn't you respond? (Legitimate reasons exist: health, personal, technical)
+2. Can you hand over full admin access?
+3. Can you document what was built?
+
+Don't be aggressive. The goal is to get access, not to win an argument. Even if you're furious, being calm gets you further than being hostile.
+
+**If they're still slow or evasive** — proceed with recovery steps. Don't wait indefinitely.
+
+## What happens if you can't get it back
+
+The reality: some websites are lost. Not because the developer stole them, but because the records are unclear, the recovery process is slow, or the developer simply has vanished.
+
+If that happens:
+
+- **You start over.** It's painful. It costs time and money. But it's not the end.
+- **You keep the domain** if you can recover it (best case) — the SEO history, brand recognition, and existing bookmarks continue.
+- **You keep your business.** The website is a tool, not the business itself.
+
+The clients who recover best from this are the ones who act fast, document everything, and treat it as a technical problem to solve rather than a personal betrayal to stew over.
+
+## A final note on trust
+
+Most freelancers are honest, reliable, and professional. The vast majority deliver what they promise and stay available for years.
+
+But not all of them do. And the good freelancers know this — which is why they *expect* clients to want access, contracts, and ownership. A developer who resists you owning your own site is telling you something.
+
+When you hire the next one — insist on ownership from day one. Not as a sign of distrust, but as a sign that you've learned what good professional relationships look like.
+
+---
+
+*Hiring someone new and not sure what to ask? Read our [10 questions to ask before hiring a web developer](/blog/questions-before-hiring-web-developer). Or if you're deciding between a freelancer and an agency, start with [our honest comparison](/blog/freelancer-vs-agency).*
