@@ -419,7 +419,7 @@ const recommended: ToolGroup[] = [
   {
     title: "Web Hosting",
     tools: [
-      { name: "Hostinger", description: "Budget-friendly WordPress hosting with fast setup and a clean admin panel. The best value option for first-time site owners.", url: "https://www.hostinger.com", icon: Icons.hostinger, tag: "Best value" },
+      { name: "Hostinger", description: "Budget-friendly WordPress hosting with fast setup and a clean admin panel. The best value option for first-time site owners.", url: "https://www.hostinger.com/?REFERRALCODE=DIGITALSYSTEMZ", icon: Icons.hostinger, tag: "Best value" },
       { name: "SiteGround", description: "Premium WordPress hosting with excellent support and reliable performance. Worth the extra cost for business-critical sites.", url: "https://www.siteground.com", icon: Icons.siteground, tag: "Best for business" },
       { name: "Kinsta", description: "Managed WordPress hosting built for performance and scale. Ideal for high-traffic sites that can't afford downtime.", url: "https://kinsta.com", icon: Icons.kinsta, tag: "Premium" },
       { name: "Cloudways", description: "Cloud hosting with more control than shared hosting, more affordable than managed WordPress. Best for developers.", url: "https://www.cloudways.com", icon: Icons.cloudways, tag: "For developers" },
