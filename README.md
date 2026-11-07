@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sitecroft — Official Website
 
-## Getting Started
+This repository contains the source code for **[Sitecroft](https://sitecroftdev.vercel.app/)**, my official web development studio website.
 
-First, run the development server:
+Sitecroft is owned and developed by **Saad Alam**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Copyright & Ownership
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+© 2026 Saad Alam. All Rights Reserved.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All source code, website designs, layouts, UI components, graphics, branding elements, and other original materials in this repository are the intellectual property of Saad Alam, unless otherwise stated.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**This repository is publicly available for viewing purposes only. Public access does not grant permission to use, copy, reproduce, redistribute, modify, or reuse any part of this project.**
 
-## Learn More
+### Restrictions
 
-To learn more about Next.js, take a look at the following resources:
+Without prior written permission from the copyright owner, you may NOT:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Copy or reproduce any part of this source code.
+- Clone, duplicate, or recreate this website or substantially similar versions of it.
+- Reuse its designs, layouts, components, or other original assets in personal or commercial projects.
+- Redistribute, republish, or sell any part of this project.
+- Claim this project or any of its original work as your own.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Permissions
 
-## Deploy on Vercel
+If you wish to use, reference, or adapt any part of this project, you must obtain explicit written permission from the copyright owner first.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For permission requests, contact:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Email:** contact@dnnengineer.com
+
+## Disclaimer
+
+This repository is not an open-source project and is not released under an open-source license.
+
+Viewing the source code does not grant any license or rights to use its contents.
+
+---
+
+**Sitecroft** — High-Performance Web Solutions for Modern Brands.
+
+Built and maintained by **Saad Alam**.
