@@ -1,8 +1,10 @@
 import type { MDXComponents } from "mdx/types";
 import Link from "next/link";
+import CopyableCode from "@/components/blog/CopyableCode";
 
 export function getMDXComponents(components: MDXComponents): MDXComponents {
   return {
+    CopyableCode,
     h2: ({ children }) => (
       <h2 className="mt-12 mb-4 text-2xl md:text-3xl font-bold text-white tracking-tight">
         {children}
@@ -48,11 +50,11 @@ export function getMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </code>
     ),
-    pre: ({ children }) => (
-      <pre className="my-6 overflow-x-auto rounded-xl border border-white/10 bg-[#0a1020] p-5 text-sm leading-relaxed">
-        {children}
-      </pre>
-    ),
+    pre: (props: any) => {
+      // Extract the raw text, avoiding the default <pre><code> wrapping
+      const codeContent = props.children?.props?.children || props.children || "";
+      return <CopyableCode>{String(codeContent).trim()}</CopyableCode>;
+    },
     hr: () => <hr className="my-10 border-white/10" />,
     strong: ({ children }) => (
       <strong className="font-semibold text-white">{children}</strong>
