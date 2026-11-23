@@ -87,6 +87,7 @@ export default function RootLayout({
           name="impact-site-verification"
           content="edc80827-6d61-4aa0-aea3-b2fad879ced9"
         />
+        <meta name="google-site-verification" content="BJnmnP8bzbi88NPe0XC1RthhOztcMmSWQWoROY8_kAg" />
       </head>
       <body className="min-h-full flex flex-col">
         <Header />
