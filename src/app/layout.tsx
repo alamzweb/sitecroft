@@ -83,6 +83,10 @@ export default function RootLayout({
             });
           `}
         </Script>
+        <meta
+          name="impact-site-verification"
+          content="edc80827-6d61-4aa0-aea3-b2fad879ced9"
+        />
       </head>
       <body className="min-h-full flex flex-col">
         <Header />
