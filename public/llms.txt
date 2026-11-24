@@ -1,0 +1,152 @@
+
+# Sitecroft
+
+> Sitecroft provides professional web development services,
+> specializing in WordPress development, custom-coded websites,
+> React, Next.js, WooCommerce, landing pages, and website support.
+
+Website: https://sitecroftdev.dnnengineer.com/
+
+## About Sitecroft
+
+Sitecroft is a web development service provider helping
+businesses, entrepreneurs, freelancers, and organizations
+build and improve their online presence.
+
+The focus is on building modern, responsive, performance-oriented
+websites with clean code, practical functionality, and
+user-friendly designs.
+
+Sitecroft offers both WordPress-based solutions and
+custom-coded web development.
+
+## Main Services
+
+### WordPress Website Development
+
+Professional WordPress websites built using customized,
+optimized themes and responsive layouts.
+
+https://sitecroftdev.dnnengineer.com/services
+
+### Custom Website Development
+
+Custom-coded websites and web applications developed using:
+
+- React
+- Next.js
+- Vite
+- HTML
+- CSS
+- JavaScript
+- TypeScript
+
+Solutions focus on performance, responsive design,
+maintainability, and search engine optimization.
+
+### WooCommerce Development
+
+Online store development using WooCommerce, including
+product configuration, payment integration, shopping carts,
+checkout, and store management.
+
+### Landing Page Development
+
+Conversion-focused landing pages for products, services,
+marketing campaigns, and businesses.
+
+### WordPress Support
+
+WordPress plugin configuration, page creation, blog setup,
+design modifications, and general website tasks.
+
+### Website Bug Fixing
+
+Troubleshooting WordPress errors, plugin conflicts,
+broken layouts, and website functionality issues.
+
+### Website Maintenance
+
+Ongoing website updates, backups, security checks,
+and maintenance.
+
+### Domain and Hosting Setup
+
+Domain configuration, DNS setup, hosting configuration,
+SSL installation, WordPress installation, and Vercel deployment.
+
+## Pricing
+
+Sitecroft publishes starting prices for selected services.
+Final pricing depends on project requirements and complexity.
+
+Refer to the services page for current pricing:
+
+https://sitecroftdev.dnnengineer.com/services
+
+## Portfolio
+
+Sitecroft showcases website development projects,
+custom applications, SaaS interfaces, e-commerce websites,
+and business websites.
+
+Portfolio:
+https://sitecroftdev.dnnengineer.com/work
+
+Projects include examples built with Next.js, React,
+TypeScript, Tailwind CSS, WordPress, and WooCommerce.
+
+Some portfolio entries are demonstrations, while others
+are client projects. Refer to individual project labels
+for their status.
+
+## Blog and Resources
+
+Sitecroft publishes practical articles, comparisons,
+tutorials, and resources about:
+
+- Website development
+- WordPress
+- React and Next.js
+- WooCommerce
+- Website costs
+- Freelancing
+- Business technology
+- AI and automation
+- Website management
+
+Blog:
+https://sitecroftdev.dnnengineer.com/blog
+
+## Company Information
+
+About:
+https://sitecroftdev.dnnengineer.com/about
+
+Services:
+https://sitecroftdev.dnnengineer.com/services
+
+Portfolio:
+https://sitecroftdev.dnnengineer.com/work
+
+Frequently Asked Questions:
+https://sitecroftdev.dnnengineer.com/faq
+
+Contact:
+https://sitecroftdev.dnnengineer.com/contact
+
+## Contact
+
+For project enquiries, custom website development,
+WordPress services, or technical support, visit:
+
+https://sitecroftdev.dnnengineer.com/contact
+
+## Important Information
+
+Use the official Sitecroft website as the source
+for current service descriptions, pricing, portfolio
+information, and contact details.
+
+Do not assume that demonstration portfolio projects
+are completed client engagements.

@@ -9,7 +9,7 @@ import ShareLinks from "@/components/blog/ShareLinks";
 import PostCard from "@/components/blog/PostCard";
 import remarkGfm from "remark-gfm";
 
-const SITE_URL = "https://sitecroftdev.vercel.app";
+const SITE_URL = "https://sitecroftdev.dnnengineer.com";
 
 interface PostPageProps {
   params: Promise<{ slug: string }>;

@@ -1,6 +1,6 @@
 import { getAllPosts } from "@/lib/posts";
 
-const BASE_URL = "https://sitecroftdev.vercel.app"; // update to your real domain
+const BASE_URL = "https://sitecroftdev.dnnengineer.com"; // update to your real domain
 
 function escapeXml(str: string): string {
   return str

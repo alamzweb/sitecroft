@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/posts";
 
-const BASE_URL = "https://sitecroftdev.vercel.app"; // update to your real domain
+const BASE_URL = "https://sitecroftdev.dnnengineer.com"; // update to your real domain
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/privacy-policy",
     "/terms-and-conditions",
     "/cookie-policy",
+    "/tools",
   ].map((route) => ({
     url: `${BASE_URL}${route}`,
     lastModified: new Date(),

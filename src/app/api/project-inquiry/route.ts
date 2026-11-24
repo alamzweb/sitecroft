@@ -172,7 +172,7 @@ function buildNotificationEmail(
           ${row("Timeline", inquiry.timeline)}
           ${row("Materials availability", inquiry.materials)}
         </table>
-        <p style="color:#475569;font-size:11px;margin-top:24px;">Submitted via sitecroftdev.vercel.app/start-a-project</p>
+        <p style="color:#475569;font-size:11px;margin-top:24px;">Submitted via sitecroftdev.dnnengineer.com/start-a-project</p>
       </div>
     </div>
   `;
@@ -195,7 +195,7 @@ function buildNotificationEmail(
     inquiry.timeline ? `Timeline: ${inquiry.timeline}` : "",
     `Materials availability: ${inquiry.materials}`,
     "",
-    "Submitted via sitecroftdev.vercel.app/start-a-project",
+    "Submitted via sitecroftdev.dnnengineer.com/start-a-project",
   ].join("\n");
 
   return { subject: `New Project Inquiry from ${inquiry.fullName}`, html, text };
