@@ -18,15 +18,43 @@ const dmSans = DM_Sans({
 
 /* ── Sitecroft Brand Metadata ── */
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sitecroftdev.dnnengineer.com"),
+
   title: {
     default: "Sitecroft — High-Performance Web Solutions for Modern Brands",
-    template: "%s — Sitecroft",
+    template: "%s | Sitecroft",
   },
+
   description:
-    "WordPress services and custom-coded websites. From WordPress sites, bug fixes, and support to hand-coded React, Next.js, and HTML builds.",
+    "Sitecroft builds fast, modern websites for businesses. WordPress, WooCommerce, custom React and Next.js development, website maintenance, bug fixes, and support.",
+
+  applicationName: "Sitecroft",
+
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
+
+  openGraph: {
+    type: "website",
+    siteName: "Sitecroft",
+    title: "Sitecroft — High-Performance Web Solutions for Modern Brands",
+    description:
+      "Modern WordPress websites, WooCommerce stores, and custom-coded web solutions built for performance, growth, and modern brands.",
+    url: "https://sitecroftdev.dnnengineer.com",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Sitecroft — High-Performance Web Solutions for Modern Brands",
+    description:
+      "Modern WordPress websites, WooCommerce stores, and custom-coded web solutions built for performance and growth.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

@@ -7,7 +7,7 @@ export default function TermsOfServicePage() {
         <div className="legal-hero-inner">
           <div className="legal-badge">Legal</div>
           <h1>Terms of Service</h1>
-          <p>Last updated: March 2026 &mdash; sitecroftdev.com</p>
+          <p>Last updated: March 2026 &mdash; sitecroftdev.dnnengineer.com</p>
         </div>
       </div>
       <div className="legal-content">
@@ -23,12 +23,12 @@ export default function TermsOfServicePage() {
 
           <div className="legal-section">
             <h2>1. Agreement to Terms</h2>
-            <p>By accessing sitecroftdev.com or purchasing any service from Sitecroft, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use our services.</p>
+            <p>By accessing sitecroftdev.dnnengineer.com or purchasing any service from Sitecroft, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use our services.</p>
           </div>
 
           <div className="legal-section">
             <h2>2. Services</h2>
-            <p>Sitecroft provides web development services including custom-coded websites, WordPress development, WooCommerce store setup, bug and error fixing, website maintenance, and domain and hosting setup. All services are performed remotely.</p>
+            <p>Sitecroft provides web development services including custom-coded websites, WordPress development, WooCommerce store setup, bug and error fixing, website maintenance, automation and API integration, and domain and hosting setup. All services are performed remotely.</p>
             <p>Service scope, timeline, and pricing are agreed upon before work begins. Any additional requirements outside the original scope may incur additional charges, which will be communicated clearly before proceeding.</p>
           </div>
 

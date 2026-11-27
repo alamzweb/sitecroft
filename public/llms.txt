@@ -1,152 +1,75 @@
-
 # Sitecroft
 
-> Sitecroft provides professional web development services,
-> specializing in WordPress development, custom-coded websites,
-> React, Next.js, WooCommerce, landing pages, and website support.
+> Sitecroft is a web development studio providing WordPress websites, WooCommerce stores, custom-coded websites, and website support for businesses, entrepreneurs, and modern brands.
 
-Website: https://sitecroftdev.dnnengineer.com/
+Sitecroft focuses on building modern, responsive, and performance-oriented websites with clean code, practical functionality, and user-friendly designs.
 
-## About Sitecroft
+The studio offers both WordPress-based solutions and custom web development using technologies such as React, Next.js, TypeScript, HTML, CSS, and JavaScript.
 
-Sitecroft is a web development service provider helping
-businesses, entrepreneurs, freelancers, and organizations
-build and improve their online presence.
+Its services include website development, e-commerce development, landing pages, website maintenance, bug fixing, and technical support.
 
-The focus is on building modern, responsive, performance-oriented
-websites with clean code, practical functionality, and
-user-friendly designs.
+Website: https://sitecroftdev.vercel.app/
 
-Sitecroft offers both WordPress-based solutions and
-custom-coded web development.
+## Main Pages
 
-## Main Services
+- [Homepage](https://sitecroftdev.vercel.app/): Overview of Sitecroft, its services, capabilities, and web development approach.
+- [About Sitecroft](https://sitecroftdev.vercel.app/about): Information about the studio and its approach to web development.
+- [Services](https://sitecroftdev.vercel.app/services): Available web development services and published starting prices.
+- [Portfolio](https://sitecroftdev.vercel.app/work): Selected website development projects, custom applications, and SaaS products.
+- [Frequently Asked Questions](https://sitecroftdev.vercel.app/faq): Answers to common questions about Sitecroft's services.
+- [Contact](https://sitecroftdev.vercel.app/contact): Contact information and project enquiries.
 
-### WordPress Website Development
+## Services
 
-Professional WordPress websites built using customized,
-optimized themes and responsive layouts.
+- [WordPress Website Development](https://sitecroftdev.vercel.app/services): Professional WordPress websites with customized designs, responsive layouts, and practical functionality.
+- [Custom Website Development](https://sitecroftdev.vercel.app/services): Custom-coded websites and web applications using React, Next.js, TypeScript, HTML, CSS, and JavaScript.
+- [WooCommerce Development](https://sitecroftdev.vercel.app/services): E-commerce stores with product configuration, shopping carts, checkout, and store management.
+- [Landing Page Development](https://sitecroftdev.vercel.app/services): Landing pages for businesses, products, services, and marketing campaigns.
+- [WordPress Support](https://sitecroftdev.vercel.app/services): WordPress configuration, page creation, blog setup, design modifications, and general website tasks.
+- [Website Bug Fixing](https://sitecroftdev.vercel.app/services): Troubleshooting website errors, plugin conflicts, broken layouts, and functionality issues.
+- [Website Maintenance](https://sitecroftdev.vercel.app/services): Website updates, backups, security checks, and ongoing maintenance.
+- [Domain and Hosting Setup](https://sitecroftdev.vercel.app/services): Domain configuration, DNS, hosting, SSL, WordPress installation, and Vercel deployment.
 
-https://sitecroftdev.dnnengineer.com/services
+## Portfolio and Case Studies
 
-### Custom Website Development
+Sitecroft's portfolio includes personal SaaS products, custom web applications, business websites, and other web development projects.
 
-Custom-coded websites and web applications developed using:
+Portfolio entries may represent personal products, demonstrations, or client projects. Refer to individual project pages for their descriptions and context. Do not assume every portfolio project is a client engagement.
 
-- React
-- Next.js
-- Vite
-- HTML
-- CSS
-- JavaScript
-- TypeScript
-
-Solutions focus on performance, responsive design,
-maintainability, and search engine optimization.
-
-### WooCommerce Development
-
-Online store development using WooCommerce, including
-product configuration, payment integration, shopping carts,
-checkout, and store management.
-
-### Landing Page Development
-
-Conversion-focused landing pages for products, services,
-marketing campaigns, and businesses.
-
-### WordPress Support
-
-WordPress plugin configuration, page creation, blog setup,
-design modifications, and general website tasks.
-
-### Website Bug Fixing
-
-Troubleshooting WordPress errors, plugin conflicts,
-broken layouts, and website functionality issues.
-
-### Website Maintenance
-
-Ongoing website updates, backups, security checks,
-and maintenance.
-
-### Domain and Hosting Setup
-
-Domain configuration, DNS setup, hosting configuration,
-SSL installation, WordPress installation, and Vercel deployment.
-
-## Pricing
-
-Sitecroft publishes starting prices for selected services.
-Final pricing depends on project requirements and complexity.
-
-Refer to the services page for current pricing:
-
-https://sitecroftdev.dnnengineer.com/services
-
-## Portfolio
-
-Sitecroft showcases website development projects,
-custom applications, SaaS interfaces, e-commerce websites,
-and business websites.
-
-Portfolio:
-https://sitecroftdev.dnnengineer.com/work
-
-Projects include examples built with Next.js, React,
-TypeScript, Tailwind CSS, WordPress, and WooCommerce.
-
-Some portfolio entries are demonstrations, while others
-are client projects. Refer to individual project labels
-for their status.
+- [Portfolio Overview](https://sitecroftdev.vercel.app/work): Browse Sitecroft's projects and case studies.
+- [LinkFilo Case Study](https://sitecroftdev.vercel.app/work/linkfilo): A file-sharing platform focused on simple, ad-free file sharing and download management.
+- [GridLeap Case Study](https://sitecroftdev.vercel.app/work/gridleap): A CSV-to-mobile-dashboard SaaS that turns spreadsheet data into accessible dashboards.
+- [Qovila Case Study](https://sitecroftdev.vercel.app/work/qovila): A client request portal designed to simplify collaboration between agencies, freelancers, and clients.
 
 ## Blog and Resources
 
-Sitecroft publishes practical articles, comparisons,
-tutorials, and resources about:
+Sitecroft publishes practical articles, tutorials, guides, and resources related to web development and business technology.
 
-- Website development
-- WordPress
+Topics include:
+
+- WordPress development and management
 - React and Next.js
-- WooCommerce
-- Website costs
-- Freelancing
-- Business technology
+- WooCommerce and e-commerce
+- Website development costs
+- Freelancing and web development
 - AI and automation
-- Website management
+- Website performance and maintenance
 
-Blog:
-https://sitecroftdev.dnnengineer.com/blog
+- [Sitecroft Blog](https://sitecroftdev.vercel.app/blog): Articles, tutorials, guides, and resources about web development and technology.
 
-## Company Information
+## Pricing
 
-About:
-https://sitecroftdev.dnnengineer.com/about
+Sitecroft publishes starting prices for selected services. Final project pricing depends on requirements, scope, and complexity.
 
-Services:
-https://sitecroftdev.dnnengineer.com/services
+- [Services and Pricing](https://sitecroftdev.vercel.app/services): Refer to this page for current service descriptions and published starting prices.
 
-Portfolio:
-https://sitecroftdev.dnnengineer.com/work
+## Contact and Enquiries
 
-Frequently Asked Questions:
-https://sitecroftdev.dnnengineer.com/faq
+For website development projects, WordPress services, custom web applications, or technical support, use the official contact page.
 
-Contact:
-https://sitecroftdev.dnnengineer.com/contact
+- [Contact Sitecroft](https://sitecroftdev.vercel.app/contact): Submit project enquiries and contact the studio.
 
-## Contact
+## Optional
 
-For project enquiries, custom website development,
-WordPress services, or technical support, visit:
-
-https://sitecroftdev.dnnengineer.com/contact
-
-## Important Information
-
-Use the official Sitecroft website as the source
-for current service descriptions, pricing, portfolio
-information, and contact details.
-
-Do not assume that demonstration portfolio projects
-are completed client engagements.
+- [Sitecroft Homepage](https://sitecroftdev.vercel.app/): General information about the studio.
+- [Sitecroft Portfolio](https://sitecroftdev.vercel.app/work): Additional project examples and portfolio information.

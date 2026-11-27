@@ -22,7 +22,7 @@ const faqData = [
       { q: "Will my website be mobile friendly?", a: "Yes — every website I build is fully responsive and tested across phones, tablets, and desktops. Mobile-friendliness is a standard part of every project, not an add-on." },
       { q: "Can I update the website myself after it's built?", a: "For WordPress sites, yes — you get an easy-to-use admin panel to update text, images, and content without technical knowledge. For custom-coded sites, I can set up a headless CMS or provide guidance on making content changes. I'll walk you through everything after delivery." },
       { q: "What types of websites can you build?", a: "Business websites, portfolios, blogs, online stores (WooCommerce), landing pages, SaaS dashboards, web applications, and more — on either WordPress or as custom-coded React/Next.js apps." },
-      { q: "Can you redesign my existing website?", a: "I focus on building new projects from scratch rather than reskinning existing sites. If you want a better website, we start fresh — whether that's on WordPress or as a custom-coded build." },
+      { q: "Can you redesign my existing website?", a: "Absolutely! I can redesign your existing website to give it a fresh, modern look and improve its overall user experience, performance, and responsiveness. Whether you need a complete redesign or just a few improvements, I'll help make your website work better for your business." },
     ],
   },
   {

@@ -7,7 +7,7 @@ export default function PrivacyPolicyPage() {
         <div className="legal-hero-inner">
           <div className="legal-badge">Legal</div>
           <h1>Privacy Policy</h1>
-          <p>Last updated: June 2026 &mdash; sitecroftdev.com</p>
+          <p>Last updated: November 2026 &mdash; sitecroftdev.dnnengineer.com</p>
         </div>
       </div>
       <div className="legal-content">
@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
 
           <div className="legal-section">
             <h2>1. Who We Are</h2>
-            <p>Our website address is: <a href="https://sitecroftdev.com">https://sitecroftdev.com</a></p>
+            <p>Our website address is: <a href="https://sitecroftdev.dnnengineer.com">https://sitecroftdev.dnnengineer.com</a></p>
             <p>Sitecroft is a solo web development service operated by Saad, based in Karachi, Pakistan. For privacy-related enquiries, contact us at <a href="mailto:contact@dnnengineer.com">contact@dnnengineer.com</a>.</p>
           </div>
 

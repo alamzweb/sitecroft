@@ -29,16 +29,18 @@ const projects: Project[] = [
     image: "/linkfilo.png",
     isClientProject: false,
     status: "Live",
+    caseStudyUrl: "/work/linkfilo",
   },
   {
     title: "GridLeap",
     description: "GridLeap is a zero-budget SaaS that instantly transforms static, messy CSV files into professional, mobile-friendly web dashboards to help small international organizations—like schools, clinics, and shops.",
     techStack: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     category: "SaaS",
-    liveUrl: "https://gridleap.dnnengineer.com/",
+    liveUrl: "https://gridleap.vercel.app/",
     image: "/gridleap.png",
     isClientProject: false,
     status: "Live",
+    caseStudyUrl: "/work/gridleap",
   },
   {
     title: "Nimbus Essence",
@@ -209,6 +211,7 @@ const projects: Project[] = [
     image: "/qovila.png",
     isClientProject: false,
     status: "Live",
+    caseStudyUrl: "/work/qovila",
   },
   {
     title: "Ledger",

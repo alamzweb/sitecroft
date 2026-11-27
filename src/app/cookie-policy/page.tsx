@@ -7,7 +7,7 @@ export default function CookiePolicyPage() {
         <div className="legal-hero-inner">
           <div className="legal-badge">Legal</div>
           <h1>Cookie Policy</h1>
-          <p>Last updated: June 2026 &mdash; sitecroftdev.com</p>
+          <p>Last updated: June 2026 &mdash; sitecroftdev.dnnengineer.com</p>
         </div>
       </div>
       <div className="legal-content">
