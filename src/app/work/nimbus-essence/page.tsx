@@ -61,7 +61,7 @@ export default function NimbusEssencePage() {
           }}
         />
         <div className="max-w-5xl mx-auto relative">
-          <div className="flex items-center gap-3 mb-8 flex-wrap">
+          <div className="flex flex-col items-start gap-5 mb-8">
             <Link
               href="/work"
               className="inline-flex items-center gap-2 text-sm transition-colors hover:text-white"
