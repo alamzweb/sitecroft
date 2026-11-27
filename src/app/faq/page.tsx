@@ -7,7 +7,7 @@ const faqData = [
   {
     category: "General",
     items: [
-      { q: "What services does Sitecroft offer?", a: "Sitecroft offers a full range of web development services — from custom-coded apps built with React, Next.js, and Vite to powerful WordPress sites, WooCommerce stores, landing pages, bug fixing, maintenance, and domain/hosting setup. Whether you need a hand-coded performance-first website or a managed WordPress solution, I've got you covered." },
+      { q: "What services does Sitecroft offer?", a: "Sitecroft offers web development and digital solutions — including custom-coded websites, WordPress sites, WooCommerce stores, landing pages, bug fixing, maintenance, and domain/hosting setup. I also provide API integration, AI automation, and workflow automation to help connect business tools and automate repetitive tasks." },
       { q: "Who is behind Sitecroft?", a: "Sitecroft is run by Saad — a full-stack web developer and automation engineer based in Karachi, Pakistan. Every project is handled personally with full attention and care, from initial consultation to final delivery." },
       { q: "Do you work with international clients?", a: "Yes, absolutely. Sitecroft works with clients globally. Communication happens online and projects are delivered remotely regardless of your location." },
       { q: "How do I get started?", a: "Simply go to the Contact page, describe what you need, and I'll get back to you within 24 hours with a plan and quote. No commitment required to reach out." },
@@ -32,6 +32,18 @@ const faqData = [
       { q: "Why choose a custom-code site over WordPress?", a: "Custom-coded sites load faster, score higher on Core Web Vitals, give you complete design freedom without template limitations, and are deployed on Vercel for blazing performance. They're ideal for brands that need maximum speed, flexibility, and a unique online presence." },
       { q: "Can I get a landing page as custom code or WordPress?", a: "Both options are available. I build conversion-driven landing pages in WordPress or as standalone custom-coded pages — whichever fits your setup best. Prices start from $60." },
       { q: "Do you handle hosting and deployment for custom sites?", a: "Yes. Custom-coded sites are deployed on Vercel (which has a generous free tier). I handle the full deployment process — domain configuration, SSL setup, and launch. Ongoing maintenance packages are also available." },
+    ],
+  },
+  {
+    category: "Automation & API Integration",
+    items: [
+      { q: "What is API integration?", a: "API integration connects different websites, applications, and business systems so they can exchange data and work together. I can integrate supported APIs into your website, application, or business workflow based on your requirements." },
+      { q: "What is the difference between AI and workflow automation?", a: "Workflow automation connects apps and automates repetitive tasks based on rules and triggers. AI automation adds artificial intelligence to tasks such as understanding messages, processing information, generating content, or making decisions within a workflow." },
+      { q: "What kind of workflows can you automate?", a: "I can automate tasks such as email processing, form submissions, notifications, data synchronization, lead management, report generation, and connecting different business tools. Each workflow is designed around your specific process." },
+      { q: "Can you integrate any API or platform?", a: "I can work with a wide range of APIs and platforms. Integration depends on the API being available, its documentation, access permissions, and any restrictions imposed by the provider. I'll review your requirements before confirming what's possible." },
+      { q: "Do I need to pay for third-party APIs or automation tools?", a: "Some APIs and automation platforms offer free plans, while others require a subscription or usage-based payment. Any third-party costs are separate from my development or setup fee and will be discussed before the project begins." },
+      { q: "Can you automate my existing business process?", a: "Yes. Tell me how your current process works and which tools you use. I'll review it and suggest a practical automation solution to reduce repetitive work and connect your systems more efficiently." },
+      { q: "How much does API integration or automation cost?", a: "Pricing depends on the number of systems involved, the complexity of the workflow, and the features required. These services are quoted individually after reviewing your requirements." },
     ],
   },
   {

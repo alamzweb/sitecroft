@@ -92,8 +92,8 @@ export default function HomePage() {
             <div className="hero-badge-dot" />
             <span>Available for New Projects</span>
           </div>
-          <h1 className="hero-title">High-Performance Web Solutions & <span className="gradient">Advanced WordPress Development</span></h1>
-          <p className="hero-sub">Built Fast. Built Right. Built to Last. — Custom-coded apps and powerful WordPress sites tailored to hit your exact business goals.</p>
+          <h1 className="hero-title">High-Performance Web Solutions &{" "}<span className="gradient">Intelligent Business Automation</span></h1>
+          <p className="hero-sub">Built Fast. Built Right. Built to Last. — Modern websites, powerful WordPress solutions, and intelligent automations designed to help your business work smarter.</p>
           <div className="hero-btns">
             <a href="/contact" className="btn-primary">
               Let's Talk Project
@@ -115,6 +115,8 @@ export default function HomePage() {
             <div className="card-3d-item"><div className="card-3d-dot" style={{ background: "#f43f5e" }} /><span>Bug & Error Fixing</span></div>
             <div className="card-3d-item"><div className="card-3d-dot" style={{ background: "#14b8a6" }} /><span>Website Maintenance</span></div>
             <div className="card-3d-item"><div className="card-3d-dot" style={{ background: "#ec4899" }} /><span>Domain & Hosting Setup</span></div>
+            <div className="card-3d-item"><div className="card-3d-dot" style={{ background: "#a855f7" }} /><span>Workflow Automation</span></div>
+            <div className="card-3d-item"><div className="card-3d-dot" style={{ background: "#f59e0b" }} /><span>AI-Powered Automation</span></div>
             <div className="card-3d-bar"><div className="card-3d-bar-fill" /></div>
             <div className="card-3d-divider" />
             <div className="card-3d-status"><div className="card-3d-status-dot" />Available for projects</div>
@@ -138,8 +140,8 @@ export default function HomePage() {
       <section id="services" className="services">
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           <div className="section-label">Expertise</div>
-          <h2 className="section-title">Web Services Tailored For You</h2>
-          <p className="section-sub">From blazing-fast custom-coded apps to powerful WordPress sites — every service delivered with care and a focus on results.</p>
+          <h2 className="section-title">Web Development & Automation Services</h2>
+          <p className="section-sub">From professional websites and online stores to intelligent business automations — practical digital solutions built around your business needs.</p>
           <div className="services-grid">
             <div className="service-card">
               <div className="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg></div>
@@ -194,6 +196,24 @@ export default function HomePage() {
               <h3>Domain & Hosting Setup</h3>
               <p>Full done-for-you setup — I buy, configure, and launch your hosting and domain so you're ready to go without the tech headache.</p>
               <div className="service-tag">From $25</div>
+            </div>
+            <div className="service-card">
+              <div className="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6366f1" strokeWidth="2"><path d="M8 8h8v8H8z" /><path d="M3 12h5M16 12h5M12 3v5M12 16v5" /></svg></div>
+              <h3>API Integration</h3>
+              <p>Connect APIs across websites, applications, and business systems to exchange data, extend functionality, and make your tools work together seamlessly.</p>
+              <div className="service-tag">Custom Quote</div>
+            </div>
+            <div className="service-card">
+              <div className="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" strokeWidth="2"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M7 7l2 2M15 15l2 2M17 7l-2 2M9 15l-2 2" /><circle cx="12" cy="12" r="4" /></svg></div>
+              <h3>AI Automation</h3>
+              <p>Build AI-powered workflows that handle repetitive tasks, process information, and connect intelligent tools to your business processes.</p>
+              <div className="service-tag">Custom Quote</div>
+            </div>
+            <div className="service-card">
+              <div className="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2"><rect x="3" y="3" width="6" height="6" rx="1" /><rect x="15" y="15" width="6" height="6" rx="1" /><path d="M9 7h3a3 3 0 0 1 3 3v5M12 12l3 3 3-3" /></svg></div>
+              <h3>Workflow Automation</h3>
+              <p>Automate repetitive business processes, connect your tools, and move data between apps automatically with custom workflows.</p>
+              <div className="service-tag">Custom Quote</div>
             </div>
           </div>
         </div>

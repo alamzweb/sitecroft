@@ -12,6 +12,9 @@ const cards = [
   { title: "Bug & Error Fixing", price: "$25", color: "card-rose", accent: "rgba(244,63,94,0.1)", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" strokeWidth="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>, desc: "Fast, reliable fixes for any WordPress issue — white screens, plugin conflicts, errors, and more. Message first to confirm." },
   { title: "Website Maintenance", price: "$25", priceNote: "/mo", color: "card-teal", accent: "rgba(20,184,166,0.1)", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>, desc: "Keep your site updated, secure, and running smoothly with ongoing monthly support, backups, and security checks." },
   { title: "Domain & Hosting Setup", price: "$25", color: "card-pink", accent: "rgba(236,72,153,0.1)", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ec4899" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>, desc: "Not technical? I'll handle everything — domain registration, hosting config, WordPress install, SSL, and full handover to you." },
+  { title: "Workflow Automation", price: "", priceLabel: "Custom quote", color: "card-indigo", accent: "rgba(99,102,241,0.1)", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" strokeWidth="2"><rect x="3" y="3" width="6" height="6" rx="1" /><rect x="15" y="15" width="6" height="6" rx="1" /><path d="M9 6h3a3 3 0 0 1 3 3v6" /><path d="M12 15h3" /></svg>, desc: "Automate repetitive business tasks, connect your tools, synchronize data, and build reliable workflows using platforms like n8n.", },
+  { title: "AI Automation", price: "", priceLabel: "Custom quote", color: "card-purple", accent: "rgba(139,92,246,0.1)", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" strokeWidth="2"><path d="M12 3v3" /><path d="M12 18v3" /><path d="M3 12h3" /><path d="M18 12h3" /><path d="m5.6 5.6 2.1 2.1" /><path d="m16.3 16.3 2.1 2.1" /><path d="m18.4 5.6-2.1 2.1" /><path d="m7.7 16.3-2.1 2.1" /><circle cx="12" cy="12" r="4" /></svg>, desc: "Build AI-powered workflows, intelligent assistants, automated email systems, and data processing solutions that help your business work smarter.",},
+  { title: "API Integration", price: "", priceLabel: "Custom quote", color: "card-indigo", accent: "rgba(99,102,241,0.1)", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" strokeWidth="2"><path d="M8 8h8v8H8z" /><path d="M3 12h5M16 12h5M12 3v5M12 16v5" /></svg>, desc: "Connect APIs across websites, applications, and business systems to exchange data, extend functionality, and make your tools work together seamlessly." },
 ];
 
 const whyCards = [
@@ -51,6 +54,65 @@ const serviceDetails = [
     disclaimer: "The $25 fee covers my setup work only. Domain registration and hosting subscription costs are <strong>paid separately by you</strong> directly to the provider. I'll recommend the best options based on your budget and needs.",
     includes: [["Domain purchase and setup","I'll register and configure your domain name"],["Hosting configuration","Traditional hosting or Vercel for custom apps"],["WordPress or app installation","Clean install ready for development"],["SSL certificate setup","Your site secured with HTTPS at no extra charge"],["Full handover to you","Admin access and everything documented clearly"]],
     footerNote: "Domain & hosting costs are not included in my fee and must be paid separately. Typical costs: domain ~$25–15/year, hosting ~$3–10/month. Vercel has a generous free tier for custom code projects." },
+  {
+    id: "workflow-automation",
+    num: "Service 10",
+    title: "Workflow & Business Automation",
+    color: "#6366f1",
+    bg: "#0a1020",
+    border: "rgba(99,102,241,0.15)",
+    checkBg: "rgba(99,102,241,0.12)",
+    gradient: "linear-gradient(90deg,#6366f1,#8b5cf6)",
+    priceFrom: "Project quote",
+    priceAmount: "Based on scope",
+    pricePer: "",
+    cta: "Automate Your Workflow",
+    includesTitle: "What I can automate",
+    reverse: true,
+    amountSmall: true,
+    paragraphs: [
+      "Spend less time on repetitive work and more time growing your business. I build automated workflows that connect your business tools, move data between systems, and handle routine tasks with less manual effort.",
+      "Using tools like n8n and API integrations, I can help streamline your operations with practical automations tailored to your existing workflow."
+    ],
+    includes: [
+      ["Workflow automation", "Automate repetitive tasks and processes"],
+      ["App and tool connections", "Connect websites, forms, and business tools"],
+      ["Automated notifications", "Send alerts, updates, and reminders"],
+      ["Data synchronization", "Keep information consistent across systems"],
+      ["Custom n8n workflows", "Build automation around your business needs"]
+    ]
+  },
+  {
+    id: "ai-automation",
+    num: "Service 11",
+    title: "AI-Powered Automation",
+    color: "#8b5cf6",
+    bg: "#060b14",
+    border: "rgba(139,92,246,0.15)",
+    checkBg: "rgba(139,92,246,0.12)",
+    gradient: "linear-gradient(90deg,#8b5cf6,#06b6d4)",
+    priceFrom: "Project quote",
+    priceAmount: "Based on scope",
+    pricePer: "",
+    cta: "Build an AI Workflow",
+    includesTitle: "AI solutions I can build",
+    paragraphs: [
+      "Bring AI into your everyday business processes. I build workflows that use AI to understand information, process content, classify data, and assist with routine tasks.",
+      "From AI-powered email workflows to intelligent assistants connected with your existing tools, each solution is designed around a real business need — not AI for the sake of AI."
+    ],
+    includes: [
+      ["AI-powered workflows", "Use AI within your existing business processes"],
+      ["AI email automation", "Classify emails and assist with routine handling"],
+      ["AI assistants", "Build task-focused assistants for your workflow"],
+      ["Data processing", "Extract, summarize, and classify information"],
+      ["Document automation", "Process and organize business documents"],
+      ["AI and app integrations", "Connect AI services with your business tools"]
+    ]
+  },
+  { id: "api-integration", num: "Service 10", title: "API Integration", color: "#6366f1", bg: "#0a1020", border: "rgba(99,102,241,0.15)", checkBg: "rgba(99,102,241,0.12)", gradient: "linear-gradient(90deg,#6366f1,#4f46e5)", priceFrom: "Custom integration", priceAmount: "Custom Quote", pricePer: "", cta: "Get Started", includesTitle: "What's included in my service",
+    paragraphs: ["Need your website, app, or business tools to communicate with each other? I'll help connect APIs from different platforms and systems, allowing them to exchange data, share functionality, and work together smoothly.", "Whether you're adding an API-powered feature to your website, connecting third-party services, or syncing information between applications, I'll build an integration around your specific requirements."],
+    disclaimer: "Integration scope depends on the API's availability, documentation, access permissions, and any restrictions set by the provider. Third-party API or subscription fees are paid separately by you.",
+    includes: [["Third-party API connections","Connect supported services and platforms"],["Custom API integration","Integrate APIs into websites or applications"],["Data exchange between systems","Send and receive information between connected tools"],["Webhook integration","Connect event-based updates where supported"],["Testing and configuration","Verify the integration and configure it for your workflow"]],},
 ];
 
 export default function ServicesPage() {
@@ -77,8 +139,8 @@ export default function ServicesPage() {
         <div className="page-hero-grid" />
         <div className="page-hero-inner">
           <div className="page-badge"><div className="badge-dot" />What We Offer</div>
-          <h1>Full-Stack Web <span>Services</span></h1>
-          <p>From blazing-fast custom-coded apps to powerful WordPress sites — every service is delivered with care, clear communication, and a focus on results.</p>
+          <h1>Web Development & <span>Automation</span></h1>
+          <p>From professional websites and online stores to intelligent business automations — practical digital solutions built around your business needs.</p>
           <p className="hero-note">All prices are starting rates. Contact for a custom quote based on your project.</p>
         </div>
       </section>

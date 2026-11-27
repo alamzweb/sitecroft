@@ -146,6 +146,9 @@ export default function ContactPage() {
                   <option value="Bug & Error Fixing">Bug & Error Fixing</option>
                   <option value="Website Maintenance">Website Maintenance</option>
                   <option value="Domain & Hosting Setup">Domain & Hosting Setup</option>
+                  <option value="API Integration">API Integration</option>
+                  <option value="Workflow Automation">Workflow Automation</option>
+                  <option value="AI Automation">AI Automation</option>
                   <option value="Something else">Something else</option>
                 </select>
               </div>
