@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 export default function HomePage() {
   useEffect(() => {
@@ -242,6 +243,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <TestimonialsSection />
 
       {/* CTA */}
       <section className="cta">
